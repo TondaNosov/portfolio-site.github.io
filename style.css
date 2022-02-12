@@ -1,61 +1,181 @@
-/* ---- reset ---- */ 
-body { 
-  margin: 0; 
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url("sources/fonts/raleway-v26-latin-regular.woff2") format("woff2"), url("sources/fonts/raleway-v26-latin-regular.woff") format("woff"), url("sources/fonts/raleway-v26-latin-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url("sources/fonts/raleway-v26-latin-700.woff2") format("woff2"), url("sources/fonts/raleway-v26-latin-700.woff") format("woff"), url("sources/fonts/raleway-v26-latin-700.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
   padding: 0;
-} 
+  margin: 0;
+}
 
-canvas { 
-  display: block; 
-  vertical-align: bottom; 
-} 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 
-/* ---- particles.js container ---- */ 
-#particles-js { 
-  position:absolute; 
+button {
+  border: none;
+  background-color: transparent;
+  font-family: Raleway, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Raleway, sans-serif;
+}
+
+/* For phones */
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  margin: 0 3.125%;
+}
+
+.page-header__wrapper {
+  z-index: 100;
+  text-align: center;
+}
+
+.page-header__welcome {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.page-header__welcome span {
+  color: #ff445e;
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+  .page-header__welcome {
+    margin-bottom: 42px;
+    font-size: 42px;
+    line-height: 54px;
+  }
+}
+
+/* For phones */
+.button {
+  display: inline-block;
+  padding: 12px 15px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #fda022;
+  border: 2px solid #fda022;
+  outline: none;
+}
+
+.button--header {
+  position: relative;
+  padding-right: 40px;
+}
+
+.button--header::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  width: 18px;
+  height: 18px;
+  background-image: url(sources/svg/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.button--header:hover::after,
+.button--header:focus::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  outline: none;
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+  .button {
+    padding: 12px 20px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .button--header {
+    padding-right: 50px;
+  }
+  .button--header::after {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+#particles-js {
+  position: absolute;
   top: 0;
-
-  width: 100%; 
+  width: 100%;
   height: 100%;
-
-  background-color: #1b202a; 
-  background-image: url(""); 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  background-position: 50% 50%; 
-} 
-
-/* ---- stats.js ---- */ 
-.count-particles { 
-  background: #000022; 
-  position: absolute; 
-  top: 48px; 
-  left: 0; 
-  width: 80px; 
-  color: #13E8E9; 
-  font-size: .8em; 
-  text-align: left; 
-  text-indent: 4px; 
-  line-height: 14px; 
-  padding-bottom: 2px; 
-  font-family: Helvetica, Arial, sans-serif; 
-  font-weight: bold; 
-} 
-
-.js-count-particles { 
-  font-size: 1.1em; 
-} 
-
-#stats, .count-particles { 
-  -webkit-user-select: none; 
-  margin-top: 5px; 
-  margin-left: 5px; 
-} 
-
-#stats { 
-  border-radius: 3px 3px 0 0; 
-  overflow: hidden; 
-} 
-
-.count-particles { 
-  border-radius: 0 0 3px 3px; 
+  background-color: #2a3247;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }

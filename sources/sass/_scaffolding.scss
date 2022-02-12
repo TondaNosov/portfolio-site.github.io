@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: 
+       url('sources/fonts/raleway-v26-latin-regular.woff2') format('woff2'), 
+       url('sources/fonts/raleway-v26-latin-regular.woff') format('woff'),
+       url('sources/fonts/raleway-v26-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src:
+       url('sources/fonts/raleway-v26-latin-700.woff2') format('woff2'),
+       url('sources/fonts/raleway-v26-latin-700.woff') format('woff'),
+       url('sources/fonts/raleway-v26-latin-700.ttf') format('truetype');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: Raleway, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: Raleway, sans-serif;
+}

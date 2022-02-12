@@ -7,24 +7,24 @@
     <meta name="author" content="Anton Nosov">
 
     <link rel="apple-touch-icon" sizes="180x180" href="sources/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="sources/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="sources/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="sources/favicon/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="sources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="sources/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
 
-    <div class="page-background">
-      <div id="particles-js"></div>
-      <p style="font-size: 30px; color: white;">TEST</p>
-      </ul>  
-
-    </div>
-
-
-    <header>
+    <header class="page-header">
+      <div class="page-header__background background" id="particles-js"></div>
+      <div class="page-header__wrapper">
+        <p class="page-header__welcome">
+          Hello, I'm <span>Anton Nosov</span>.<br>
+          I'm a junior web developer.
+        </p>
+        <button class="button button--header" type="button" onclick="document.location='#contacts'">Hire me</button>
+      </div>
       <nav>
         <ul>
           <li><a>About</a></li>
@@ -33,10 +33,6 @@
           <li><a>Contact</a></li>
         </ul>  
       </nav>
-      <p>
-        Hello, I'm <span>Anton Nosov</span>.<br>
-        I'm a junior web developer.
-      </p>
     </header>
 
     <main>
@@ -86,7 +82,11 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div id="contacts">
+        TEST
+      </div>
+    </footer>
 
     <script src="sources/js/particles.js"></script>
     <script src="sources/js/app.js"></script>
