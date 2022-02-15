@@ -15,9 +15,10 @@
   </head>
 
   <body>
-
+<!-- HEADER -->
     <header class="page-header">
       <div class="page-header__background background" id="particles-js"></div>
+
       <div class="page-header__wrapper">
         <p class="page-header__welcome">
           Hello, I'm <span>Anton Nosov</span>.<br>
@@ -25,21 +26,26 @@
         </p>
         <button class="button button--header" type="button" onclick="document.location='#contacts'">Hire me</button>
       </div>
-      <nav>
-        <ul>
-          <li><a>About</a></li>
-          <li><a>Skills</a></li>
-          <li><a>Portfolio</a></li>
-          <li><a>Contact</a></li>
+
+      <nav class="page-header__nav main-nav main-nav--close">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Open/close window button</span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active"><a href="#">Home</a></li> <!--Add JS-->
+          <li class="main-nav__item"><a href="#about">About</a></li>
+          <li class="main-nav__item"><a href="#skills">Skills</a></li>
+          <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
+          <li class="main-nav__item"><a href="#contacts">Contact</a></li>
         </ul>  
       </nav>
     </header>
 
     <main>
-      <h1>Hi, I am Anton Nosov</h1>
+      <h1 class="visually-hidden">Anton Nosov is looking for a job as a web developer</h1>
     
       <section>
-        <h2>Objection</h2>
+        <h2>About</h2>
         <p>...</p>
       </section>
   
@@ -90,6 +96,7 @@
 
     <script src="sources/js/particles.js"></script>
     <script src="sources/js/app.js"></script>
+    <script src="sources/js/open-close-nav.js"></script>
 
   </body>
 </html>

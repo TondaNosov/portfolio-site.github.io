@@ -179,3 +179,106 @@ body {
   background-size: cover;
   background-position: 50% 50%;
 }
+
+.main-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #2a3247;
+  z-index: 100;
+}
+
+.main-nav__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 44px;
+  background-color: #141d31;
+  border-top: 3px solid #fda022;
+}
+
+.main-nav__item {
+  padding: 12px 12px;
+  text-align: center;
+}
+
+.main-nav__item a {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main-nav__item:hover a {
+  color: #ff445e;
+  outline: none;
+}
+
+/* MAIN-NAV--CLOSE */
+.main-nav--close {
+  height: 47px;
+  border-bottom: 3px solid #fda022;
+}
+
+.main-nav--close .main-nav__list {
+  display: none;
+}
+
+/* TOGGLE */
+.main-nav__toggle {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.main-nav--open .main-nav__toggle:before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 0px;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.main-nav--open .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 0px;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.main-nav--close .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 10px #ffffff, 0px 20px #ffffff;
+          box-shadow: 0px 10px #ffffff, 0px 20px #ffffff;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
