@@ -17,7 +17,7 @@
   <body>
 <!-- HEADER -->
     <header class="page-header">
-      <div class="page-header__background background" id="particles-js"></div>
+      <div class="page-header__background" id="particles-js"></div>
 
       <div class="page-header__wrapper">
         <p class="page-header__welcome">
@@ -97,6 +97,14 @@
     <script src="sources/js/particles.js"></script>
     <script src="sources/js/app.js"></script>
     <script src="sources/js/open-close-nav.js"></script>
+    <script>
+      let body = document.getElementsByTagName("body");
+
+      navBar.addEventListener("scroll", function() {
+        console.log("test");
+        document.querySelector('.main-nav').classList.add("main-nav--fixed");
+      });
+    </script>
 
   </body>
 </html>
