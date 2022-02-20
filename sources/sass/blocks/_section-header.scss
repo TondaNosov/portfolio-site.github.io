@@ -1,0 +1,21 @@
+.section-header {
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 10px;
+
+  font-size: 35px;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-header__underline {
+  height: 4px;
+  width: 70px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 46px;
+
+  background-color: $text-color;
+}

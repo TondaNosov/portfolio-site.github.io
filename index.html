@@ -35,50 +35,89 @@
           <li class="main-nav__item main-nav__item--active"><a href="#">Home</a></li> <!--Add JS-->
           <li class="main-nav__item"><a href="#about">About</a></li>
           <li class="main-nav__item"><a href="#skills">Skills</a></li>
+          <li class="main-nav__item"><a href="#courses">Courses</a></li>
           <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
           <li class="main-nav__item"><a href="#contacts">Contact</a></li>
         </ul>  
       </nav>
     </header>
-
-    <main>
+<!-- MAIN -->
+    <main class="page-main">
       <h1 class="visually-hidden">Anton Nosov is looking for a job as a web developer</h1>
-    
-      <section>
-        <h2>About</h2>
-        <p>...</p>
+<!-- ABOUT -->
+      <section class="about" id="about">
+        <h2 class="about__header section-header">About</h2>
+        <div class="section-header__underline"></div>
+        <img class="about__image" src="sources/img/ANTON_600_600.jpg" width="250px" height="250px" alt="Photo of Anton Nosov">
+        <p class="about__info">
+          I'm an enthusiastic Junior Front-End Developer in Prague, Czech Regublic seeking an entry-level position with 
+          conpany to use my skills in codding, troubleshooting problems and assisting in the timely complesion of projects.
+        </p>
       </section>
-  
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Basics JavaScript</li>
-          <li>Sass/Less</li>
-          <li>Git</li>
-          <li>BEM</li>
-          <li>Responsive/Adaptive ...</li>
-          <li>Avocode/Photoshop</li>
+<!-- SKILLS -->
+      <section class="skills" id="skills">
+        <h2 class="section-header">Skills</h2>
+        <div class="section-header__underline"></div>
+        <ul class="skills__list">
+          <li class="skills__item">
+            <img src="sources/svg/html.svg" alt="HTML logotype"> <!--Add width/height-->
+            <p>HTML5</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/css.svg" alt="CSS logotype"> <!--Add width/height-->
+            <p>CSS3</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/js.svg" alt="JS logotype"> <!--Add width/height-->
+            <p>Javascript Basics</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/sass.svg" alt="SASS logotype"> <!--Add width/height-->
+            <p>Sass</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/git.svg" alt="GIT logotype"> <!--Add width/height-->
+            <p>Git Basics</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/bem.svg" alt="BEM logotype"> <!--Add width/height-->
+            <p>BEM CSS</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/responsive-design.svg" alt="Responsive Web Design logotype"> <!--Add width/height-->
+            <p>Responsive Web Design</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/avocode.svg" alt="Avocode logotype"> <!--Add width/height-->
+            <p>Avocode</p>
+          </li>
+          <li class="skills__item">
+            <img src="sources/svg/photoshop.svg" alt="Photoshop logotype"> <!--Add width/height-->
+            <p>Photoshop</p>
+          </li>
         </ul>
       </section>
-      
-      <section>
-        <h2>Courses</h2>
-        <ul>
-          <li>
+<!-- COURSES -->
+      <section class="courses" id="courses">
+        <h2 class="section-header">Courses</h2>
+        <div class="section-header__underline"></div>
+        <ul class="courses__list">
+          <li class="courses__item">
+            <img src="sources/img/freecodecamp-small.png" width="250" height="auto" alt="FreeCodeCamp certificate">
             <h3>Responsive Web Design Certification</h3>
-            <p>freecodecamp.org</p>
+            <p><a href="https://www.freecodecamp.org/">freecodecamp.org</a></p>
           </li>
-          <li>
-            <h3>Professional HTML & CSS, level 2</h3>
-            <p>HTML Academy</p>
+          <li class="courses__item">
+            <img src="sources/img/htmlacademy-small.jpeg" width="250" height="auto" alt="HTML Academy">
+            <h3>Professional HTML & CSS, level 1, 2</h3>
+            <p><a href="https://htmlacademy.ru/">HTML Academy</a></p>
           </li>
         </ul>
       </section>
   
-      <section>
-        <h2>Training projects</h2>
+      <section class="projects">
+        <h2 class="section-header">Training projects</h2>
+        <div class="section-header__underline"></div>
         <ul>
           <li>Portfolio Website</li>
           <li>Cat Enegry Website</li>
@@ -97,14 +136,6 @@
     <script src="sources/js/particles.js"></script>
     <script src="sources/js/app.js"></script>
     <script src="sources/js/open-close-nav.js"></script>
-    <script>
-      let body = document.getElementsByTagName("body");
-
-      navBar.addEventListener("scroll", function() {
-        console.log("test");
-        document.querySelector('.main-nav').classList.add("main-nav--fixed");
-      });
-    </script>
 
   </body>
 </html>

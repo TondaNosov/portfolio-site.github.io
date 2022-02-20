@@ -1,0 +1,33 @@
+.skills {
+  background-color: $background-color;
+  padding-bottom: 30px;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  
+  margin: 0 3.125%;
+}
+
+.skills__item {
+  width: 140px;
+  
+  text-align: center;
+}
+
+.skills__item img {  
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.skills__item p {
+  padding: 10px 0 30px 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
