@@ -55,6 +55,10 @@ a {
   overflow: hidden;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -181,7 +185,7 @@ body {
 }
 
 .main-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #2a3247;
@@ -197,9 +201,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 267px;
   margin-top: 44px;
   background-color: #141d31;
   border-top: 3px solid #fda022;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .main-nav__item {
@@ -231,7 +239,7 @@ body {
 }
 
 .main-nav--close .main-nav__list {
-  display: none;
+  height: 0;
 }
 
 /* TOGGLE */
@@ -298,6 +306,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: auto;
   }
   .main-nav__list {
     -webkit-box-orient: horizontal;
@@ -315,8 +324,13 @@ body {
 /* For desctops */
 @media (min-width: 1200px) {
   .main-nav {
+    position: absolute;
     top: 100vh;
     background-color: #141d31;
+  }
+  .main-nav--fixed {
+    position: fixed;
+    top: 0;
   }
   .main-nav__list {
     width: 1200px;
@@ -447,4 +461,138 @@ body {
 
 .projects {
   background-color: #f5f5f5;
+}
+
+/* LEFT APPEARANCE */
+@-webkit-keyframes appearance-left {
+  from {
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes appearance-left {
+  from {
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.left-appearance {
+  -webkit-animation-name: appearance-left;
+          animation-name: appearance-left;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* RIGHT APPEARANCE */
+@-webkit-keyframes appearance-right {
+  from {
+    -webkit-transform: translateX(50vw);
+            transform: translateX(50vw);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes appearance-right {
+  from {
+    -webkit-transform: translateX(50vw);
+            transform: translateX(50vw);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.right-appearance {
+  -webkit-animation-name: appearance-right;
+          animation-name: appearance-right;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* BOTTOM APPEARANCE */
+@-webkit-keyframes appearance-bottom {
+  from {
+    -webkit-transform: translateY(50vh);
+            transform: translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes appearance-bottom {
+  from {
+    -webkit-transform: translateY(50vh);
+            transform: translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.bottom-appearance {
+  -webkit-animation-name: appearance-bottom;
+          animation-name: appearance-bottom;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/*NAV DOWN*/
+@-webkit-keyframes nav-down {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+@keyframes nav-down {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+.nav-down {
+  -webkit-animation-name: nav-down;
+          animation-name: nav-down;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
