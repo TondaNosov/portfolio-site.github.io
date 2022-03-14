@@ -18,6 +18,10 @@
        url('sources/fonts/raleway-v26-latin-700.ttf') format('truetype');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
