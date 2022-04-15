@@ -1,3 +1,30 @@
+/*BACKGROUND GRADIENT*/
+
+@keyframes animateGradient {
+  0% {background-position: 0% 0%;}
+  50% {background-position: 100% 100%;}
+  100% {background-position: 0% 0%;}
+}
+
+.page-header__background {
+  animation-name: animateGradient;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+/*NAV DOWN*/
+
+@keyframes navDown {
+  0% {transform: translateY(-100px);}
+}
+
+.main-nav--down {
+  animation-name: navDown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+}
+
 /* LEFT APPEARANCE */
 
 @keyframes appearance-left {
@@ -42,14 +69,3 @@
   animation-fill-mode: forwards;
 }
 
-/*NAV DOWN*/
-
-@keyframes nav-down {
-  0% {transform: translateY(-100px);}
-}
-
-.nav-down {
-  animation-name: nav-down;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-}

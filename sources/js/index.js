@@ -19,25 +19,25 @@ navToggle.addEventListener("click", function (evt) {
 
 // NAV POSITION
 
-document.addEventListener ("scroll", function() {
+document.addEventListener("scroll", function() {
   if (
     document.documentElement.scrollTop > (header.clientHeight + navBar.clientHeight) && 
     window.innerWidth >= 1200
     ) {
    document.querySelector(".main-nav").classList.add("main-nav--fixed"),
-   document.querySelector(".main-nav").classList.add("nav-down");
+   document.querySelector(".main-nav").classList.add("main-nav--down");
   }
 
   if (document.documentElement.scrollTop < header.clientHeight) {
     document.querySelector(".main-nav").classList.remove("main-nav--fixed"),
-    document.querySelector(".main-nav").classList.remove("nav-down");
+    document.querySelector(".main-nav").classList.remove("main-nav--down");
    }
  });
 
 //  ACTIVE PAGE
 
 for (let i = 0; i < navBarItemArr.length; i++) {
-  navBarItemArr[i].addEventListener("click", function() {
+  navBarItemArr[i].addEventListener("click", function(evt) {
 
     for (let i = 0; i < navBarItemArr.length; i++) {
       navBarItemArr[i].classList.remove("main-nav__item--active");
@@ -48,3 +48,23 @@ for (let i = 0; i < navBarItemArr.length; i++) {
     navBar.classList.add("main-nav--close");
   });
 }
+
+// SCROLL ANIMATIONS
+
+window.onscroll = function() {
+
+  document.querySelector(".about__header").classList.add("hidden");
+  document.querySelector(".about__underline").classList.add("hidden");
+  document.querySelector(".about__image").classList.add("hidden");
+  document.querySelector(".about__info").classList.add("hidden");
+
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350 ) 
+  document.querySelector(".about__header").classList.add("left-appearance"),
+  document.querySelector(".about__underline").classList.add("right-appearance");
+
+  if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450 ) 
+  document.querySelector(".about__image").classList.add("bottom-appearance");
+
+  if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550 ) 
+  document.querySelector(".about__info").classList.add("bottom-appearance"); 
+};

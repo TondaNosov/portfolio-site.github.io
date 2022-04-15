@@ -5,6 +5,7 @@
   width: 100%;
 
   background-color: $base-color;
+  border-bottom: 3px solid $third-color;
 
   z-index: 100;
 }
@@ -53,11 +54,16 @@
 
 .main-nav--close {
   height: 47px;
-  border-bottom: 3px solid $third-color;
 }
 
 .main-nav--close .main-nav__list {
   height: 0;
+}
+
+/* MAIN-NAV--OPEN */
+
+.main-nav--open {
+  border-bottom: none;
 }
 
 /* TOGGLE */
@@ -133,13 +139,14 @@
   }
 
   .main-nav--close .main-nav__list {
-    display: flex;
     height: auto;
   }
 
   .main-nav__list {
+    display: flex;
     flex-direction: row;
-
+    
+    height: auto;
     margin-top: 0px;
 
     border-top: none;
@@ -152,7 +159,7 @@
 
 /* For desctops */
 
-@media (min-width: $desctop-width) { 
+@media (min-width: $desktop-width) { 
   .main-nav {
     position: absolute;
     top: 100vh; 
