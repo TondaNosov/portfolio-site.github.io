@@ -1,137 +1,224 @@
 <!DOCTYPE html>
-<html lang="en"> 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Anton Nosov | Portfolio Website</title>
-    <meta name="author" content="Anton Nosov">
+<html lang="en">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="sources/favicon/apple-touch-icon.png">
-    <link rel="shortcut icon" type="image/png" sizes="32x32" href="sources/favicon/favicon-32x32.png">
-    <link rel="shortcut icon" type="image/png" sizes="16x16" href="sources/favicon/favicon-16x16.png">
-    <link rel="manifest" href="sources/favicon/site.webmanifest">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Anton Nosov | Portfolio Website</title>
+  <meta name="author" content="Anton Nosov">
 
-    <link rel="stylesheet" href="style.css">
-  </head>
+  <link rel="apple-touch-icon" sizes="180x180" href="sources/favicon/apple-touch-icon.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="sources/favicon/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="sources/favicon/favicon-16x16.png">
+  <link rel="manifest" href="sources/favicon/site.webmanifest">
 
-  <body>
-<!-- HEADER -->
-    <header class="page-header">
-      <div class="page-header__background"></div>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      <div class="page-header__wrapper">
-        <p class="page-header__welcome">
-          Hello, I'm <span>Anton Nosov</span>.<br>
-          I'm a junior web developer.
-        </p>
-        <button class="button button--header" type="button" onclick="document.location='#contacts'">Hire me</button>
-      </div>
+<body>
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="page-header__background"></div>
 
-      <nav class="page-header__nav main-nav main-nav--close">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Open/close window button</span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active"><a href="#">Home</a></li> <!--Add JS-->
-          <li class="main-nav__item"><a href="#about">About</a></li>
-          <li class="main-nav__item"><a href="#skills">Skills</a></li>
-          <li class="main-nav__item"><a href="#courses">Courses</a></li>
-          <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
-          <li class="main-nav__item"><a href="#contacts">Contact</a></li>
-        </ul>  
-      </nav>
-    </header>
-<!-- MAIN -->
-    <main class="page-main">
-      <h1 class="visually-hidden">Anton Nosov is looking for a job as a web developer</h1>
-<!-- ABOUT -->
-      <section class="about" id="about">
-        <h2 class="about__header section-header">About</h2>
-        <div class="about__underline section-header__underline"></div>
-        <img class="about__image" src="sources/img/ANTON_600_600.jpg" width="250px" height="250px" alt="Photo of Anton Nosov">
-        <p class="about__info">
-            I'm an enthusiastic Junior Front-End Developer in Prague, Czech Regublic seeking an entry-level position with 
-            conpany to use my skills in codding, troubleshooting problems and assisting in the timely complesion of projects.
-        </p>
-      </section>
-<!-- SKILLS -->
-      <section class="skills" id="skills">
-        <h2 class="section-header">Skills</h2>
-        <div class="section-header__underline"></div>
-        <ul class="skills__list">
-          <li class="skills__item">
-            <img src="sources/svg/html.svg" alt="HTML logotype"> <!--Add width/height-->
-            <p>HTML5</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/css.svg" alt="CSS logotype"> <!--Add width/height-->
-            <p>CSS3</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/js.svg" alt="JS logotype"> <!--Add width/height-->
-            <p>Javascript Basics</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/sass.svg" alt="SASS logotype"> <!--Add width/height-->
-            <p>Sass</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/git.svg" alt="GIT logotype"> <!--Add width/height-->
-            <p>Git Basics</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/bem.svg" alt="BEM logotype"> <!--Add width/height-->
-            <p>BEM CSS</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/responsive-design.svg" alt="Responsive Web Design logotype"> <!--Add width/height-->
-            <p>Responsive Web Design</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/avocode.svg" alt="Avocode logotype"> <!--Add width/height-->
-            <p>Avocode</p>
-          </li>
-          <li class="skills__item">
-            <img src="sources/svg/photoshop.svg" alt="Photoshop logotype"> <!--Add width/height-->
-            <p>Photoshop</p>
-          </li>
-        </ul>
-      </section>
-<!-- COURSES -->
-      <section class="courses" id="courses">
-        <h2 class="section-header">Courses</h2>
-        <div class="section-header__underline"></div>
-        <ul class="courses__list">
-          <li class="courses__item">
-            <img src="sources/img/freecodecamp-small.png" width="250" height="auto" alt="FreeCodeCamp certificate">
-            <h3>Responsive Web Design Certification</h3>
-            <p><a href="https://www.freecodecamp.org/">freecodecamp.org</a></p>
-          </li>
-          <li class="courses__item">
-            <img src="sources/img/htmlacademy-small.jpeg" width="250" height="auto" alt="HTML Academy">
-            <h3>Professional HTML & CSS, level 1, 2</h3>
-            <p><a href="https://htmlacademy.ru/">HTML Academy</a></p>
-          </li>
-        </ul>
-      </section>
-  
-      <section class="projects">
-        <h2 class="section-header">Training projects</h2>
-        <div class="section-header__underline"></div>
-        <ul>
-          <li>Portfolio Website</li>
-          <li>Cat Enegry Website</li>
-        </ul>
-      </section>
-    </main>
+    <div class="page-header__wrapper">
+      <p class="page-header__welcome">
+        Hello, I'm <span>Anton Nosov</span>.<br>
+        I'm a junior web developer.
+      </p>
+      <button class="button button--header" type="button" onclick="document.location='#contacts'">Hire me</button>
+    </div>
 
-    <footer>
-      <div id="contacts">
-        TEST
-      </div>
-    </footer>
+    <nav class="page-header__nav main-nav main-nav--close">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Open/close window button</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active"><a href="#">Home</a></li>
+        <!--Add JS-->
+        <li class="main-nav__item"><a href="#about">About</a></li>
+        <li class="main-nav__item"><a href="#skills">Skills</a></li>
+        <li class="main-nav__item"><a href="#courses">Courses</a></li>
+        <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
+        <li class="main-nav__item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main class="page-main">
+    <h1 class="visually-hidden">Anton Nosov is looking for a job as a web developer</h1>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <h2 class="about__header section-header">About</h2>
+      <div class="about__underline section-header__underline"></div>
+      <img class="about__image" src="sources/img/ANTON_600_600.jpg" width="250px" height="250px"
+        alt="Photo of Anton Nosov">
+      <p class="about__info">
+        I'm an enthusiastic Junior Front-End Developer in Prague, Czech Regublic seeking an entry-level position with
+        conpany to use my skills in codding, troubleshooting problems and assisting in the timely complesion of
+        projects.
+      </p>
+    </section>
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <h2 class="section-header">Skills</h2>
+      <div class="section-header__underline"></div>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <img src="sources/svg/html.svg" alt="HTML logotype">
+          <!--Add width/height-->
+          <p>HTML5</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/css.svg" alt="CSS logotype">
+          <!--Add width/height-->
+          <p>CSS3</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/js.svg" alt="JS logotype">
+          <!--Add width/height-->
+          <p>Javascript Basics</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/sass.svg" alt="SASS logotype">
+          <!--Add width/height-->
+          <p>Sass</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/git.svg" alt="GIT logotype">
+          <!--Add width/height-->
+          <p>Git Basics</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/bem.svg" alt="BEM logotype">
+          <!--Add width/height-->
+          <p>BEM CSS</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/responsive-design.svg" alt="Responsive Web Design logotype">
+          <!--Add width/height-->
+          <p>Responsive Web Design</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/avocode.svg" alt="Avocode logotype">
+          <!--Add width/height-->
+          <p>Avocode</p>
+        </li>
+        <li class="skills__item">
+          <img src="sources/svg/photoshop.svg" alt="Photoshop logotype">
+          <!--Add width/height-->
+          <p>Photoshop</p>
+        </li>
+      </ul>
+    </section>
+    <!-- COURSES -->
+    <section class="courses" id="courses">
+      <h2 class="section-header">Courses</h2>
+      <div class="section-header__underline"></div>
+      <ul class="courses__list">
+        <li class="courses__item">
+          <img src="sources/img/freecodecamp-small.png" width="250" height="auto" alt="FreeCodeCamp certificate">
+          <h3>Responsive Web Design Certification</h3>
+          <a href="https://www.freecodecamp.org/">freecodecamp.org</a>
+          <p></p>
+        </li>
+        <li class="courses__item">
+          <img src="sources/img/htmlacademy-small.jpeg" width="250" height="auto" alt="HTML Academy">
+          <h3>Professional HTML & CSS, level 1, 2</h3>
+          <p><a href="https://htmlacademy.ru/">HTML Academy</a></p>
+        </li>
+      </ul>
+    </section>
 
-    <script src="sources/js/index.js"></script>
+    <!-- PROJECTS -->
+    <section class="projects">
+      <h2 class="section-header">Projects</h2>
+      <div class="section-header__underline"></div>
+      <ul class="projects__list">
+        <li class="projects__item card">
+          <img class="card__image" src="sources/img/cat-energy-crop.png" width="400" height="auto"
+            alt="Portfolio Website">
+          <div class="card__wrap">
+            <h3 class="card__header">Portfolio Website</h3>
+            <span class="card__desc">HTML / CSS / JS</span>
+            <button class="card__button button" type="button">Learn more</button>
+          </div>
+        </li>
+        <li class="projects__item card">
+          <img class="card__image" src="sources/img/cat-energy-crop.png" width="400" height="auto"
+            alt="Portfolio Website">
+          <div class="card__wrap">
+            <h3 class="card__header">Portfolio Website</h3>
+            <span class="card__desc">HTML / CSS / JS</span>
+            <button class="card__button button" type="button">Learn more</button>
+          </div>
+        </li>
+        <li class="projects__item card">
+          <img class="card__image" src="sources/img/cat-energy-crop.png" width="400" height="auto"
+            alt="Portfolio Website">
+          <div class="card__wrap">
+            <h3 class="card__header">Portfolio Website</h3>
+            <span class="card__desc">HTML / CSS / JS</span>
+            <button class="card__button button" type="button">Learn more</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-  </body>
+  <footer class="page-footer">
+
+    <section id="contact">
+      <h2 class="section-header section-header--footer">Contact</h2>
+      <div class="section-header__underline section-header__underline--footer"></div>
+
+      <span class="contact__intro">Have a question or want to work together?</span>
+
+      <form class="contact__form" action="https://www.w3schools.com/action_page.php" target="_self" method="post"
+        autocomplete="on">
+        <input class="contact__input" type="text" id="name" name="Name" placeholder="Name" required>
+        <input class="contact__input" type="text" id="company" name="company" placeholder="Company">
+        <input class="contact__input" type="email" id="email" name="E-mail" placeholder="E-mail"
+          pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_.]+" required>
+        <textarea class="contact__message" name="message" placeholder="Your message"></textarea>
+        <button class="button contact__button" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <button class="contact__home-button"><span class="visually-hidden">Home</span></button>
+    
+    <section class="social-networks">
+      <ul class="social-networks__list">
+        <li class="social-networks__item social-networks__item--linkedin">
+          <a class="social-networks__link">
+            <span class="visually-hidden">
+              linkedIn
+            </span>
+          </a>
+        </li>
+        <li class="social-networks__item social-networks__item--facebook">
+          <a class="social-networks__link">
+            <span class="visually-hidden">
+              Facebook
+            </span>
+          </a>
+        </li>
+        <li class="social-networks__item social-networks__item--instagram">
+          <a class="social-networks__link">
+            <span class="visually-hidden">
+              Instagram
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <div class="page-footer__info">
+      Anton Nosov
+      <span>©2022</span>
+    </div>
+  </footer>
+
+  <script src="sources/js/index.js"></script>
+
+</body>
+
 </html>

@@ -13,10 +13,5 @@
    "liveSassCompile.settings.autoprefix": [
        "> 1%",
        "last 2 versions"
-   ],
-
-   "editor.defaultFormatter": "esbenp.prettier-vscode",
-   "[javascript]": {
-     "editor.defaultFormatter": "esbenp.prettier-vscode"
-   }
+    ],
 }

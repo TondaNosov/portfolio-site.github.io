@@ -17,5 +17,13 @@
   margin-right: auto;
   margin-bottom: 46px;
 
-  background-color: $text-color;
+  background: $text-color;
+}
+
+.section-header--footer {
+  color: $white-color;
+}
+
+.section-header__underline--footer {
+  background: $white-color;
 }

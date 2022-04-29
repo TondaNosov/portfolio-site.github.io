@@ -1,0 +1,47 @@
+.social-networks {  
+  padding-top: 40px;
+  background-color: $base-darker-color;
+}
+
+.social-networks__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-networks__item {
+  position: relative;
+
+  margin:40px 15px 15px 15px;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: $base-color;
+}
+
+.social-networks__item::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  width: 25px;
+  height: 25px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.social-networks__item--linkedin::before {
+  background-image: url(sources/svg/linkedin.svg);
+}
+.social-networks__item--facebook::before {
+  background-image: url(sources/svg/facebook.svg);
+}
+.social-networks__item--instagram::before {
+  background-image: url(sources/svg/instagram.svg);
+}

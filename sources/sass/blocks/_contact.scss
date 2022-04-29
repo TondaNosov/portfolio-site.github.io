@@ -1,0 +1,91 @@
+.contact__intro {
+  display: block;
+
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: $second-color;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 3.125%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+.contact__form input, textarea {
+  display: block;
+  min-width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 3px;
+
+  font-size: 16px;
+  line-height: 1;
+  color: $white-color;
+
+  border: none;
+
+  background-color: $base-darker-color;
+}
+
+.contact__form textarea {
+  min-height: 150px;
+}
+
+.contact__button {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.contact__home-button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 50px;
+  width: 50px;
+  
+  background-color: $second-color;
+}
+
+.contact__home-button::before {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  right: 14px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url(sources/svg/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  transform: rotate(-90deg);
+}
+
+.contact__home-button::after {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+  right: 14px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url(sources/svg/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  transform: rotate(-90deg);
+}
