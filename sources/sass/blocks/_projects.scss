@@ -1,3 +1,14 @@
 .projects {
   background-color: $background-color;
 }
+
+.projects__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  
+  margin: 0 3.125%;
+}
+
+

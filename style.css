@@ -534,6 +534,22 @@ body {
   background-color: #f5f5f5;
 }
 
+.projects__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 3.125%;
+}
+
 /*BACKGROUND GRADIENT*/
 @-webkit-keyframes animateGradient {
   0% {
@@ -701,4 +717,94 @@ body {
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  opacity: 0;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+.card__header {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #474747;
+  text-align: center;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+
+.card__desc {
+  margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #ff445e;
+  text-align: center;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+
+.card__button {
+  color: #474747;
+  border-color: #ff445e;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+
+.card:hover .card__wrap {
+  opacity: 1;
+}
+
+.card:hover .card__header,
+.card:hover .card__desc,
+.card:hover .card__button {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card__button:hover {
+  background-color: #ff445e;
+  border-color: #ff445e;
+  color: #ffffff;
 }
