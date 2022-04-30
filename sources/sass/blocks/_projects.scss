@@ -1,15 +1,12 @@
 .projects {
   background-color: $background-color;
-  padding-bottom: 30px;
+  padding: 40px 5%;
 }
 
 .projects__list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content:center;
-  
-  margin: 0 3.125%;
+  flex-direction: column;
+  align-items: center;
 }
 
 

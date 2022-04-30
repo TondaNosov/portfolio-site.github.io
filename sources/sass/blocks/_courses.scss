@@ -1,39 +1,67 @@
 .courses {
-  margin: 0 3.125%;
+  padding: 40px 5%;
 }
 
 .courses__list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 25px;
 }
+
 
 .courses__item {
-  max-width: 350px;
+  position: relative;
 }
 
-.courses__item img {
-  width: 100%;
+.courses__item::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left:-25px;
+
+  width: 12px;
+  height: 12px;
+  
+  background-color: $second-color;
 }
 
 .courses__item h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
 }
 
-.courses__item p {
-  padding-bottom: 60px;
-
-  font-size: 16px;
-  line-height: 20px;
-}
-
 .courses__item a {
-  padding-bottom: 5px;
+  display: inline-block;
 
+  padding: 0;
+  padding-bottom: 5px;
+  margin: 0;
+  margin-bottom: 35px;
+
+  font-weight: 400;
   color: $text-color;
 
   border-bottom: 1px solid $second-color;
+
+  transition: 0.25s;
+
+  &:hover {
+    color: $second-color;
+  }
+  &:active {
+    text-shadow: 0 0 2px $second-color;
+  }
+}
+
+.courses__img {
+  display: block;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }

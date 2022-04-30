@@ -27,45 +27,45 @@
 
 /* LEFT APPEARANCE */
 
-@keyframes appearance-left {
-  from {transform: translateX(-50vw); opacity: 0;}
-  to {transform: translateX(0%); opacity: 1;}
-}
+// @keyframes appearance-left {
+//   from {transform: translateX(-50vw); opacity: 0;}
+//   to {transform: translateX(0%); opacity: 1;}
+// }
 
-.left-appearance {
-  animation-name: appearance-left;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
+// .left-appearance {
+//   animation-name: appearance-left;
+//   animation-duration: 0.5s;
+//   animation-timing-function: ease-out;
+//   animation-fill-mode: forwards;
+// }
 
 /* RIGHT APPEARANCE */
 
-@keyframes appearance-right {
-  from {transform: translateX(50vw); opacity: 0;}
-  to {transform: translateX(0%); opacity: 1;}
-}
+// @keyframes appearance-right {
+//   from {transform: translateX(50vw); opacity: 0;}
+//   to {transform: translateX(0%); opacity: 1;}
+// }
 
 
-.right-appearance {
-  animation-name: appearance-right;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
+// .right-appearance {
+//   animation-name: appearance-right;
+//   animation-duration: 0.5s;
+//   animation-timing-function: ease-out;
+//   animation-fill-mode: forwards;
+// }
 
 /* BOTTOM APPEARANCE */
 
-@keyframes appearance-bottom {
-  from {transform: translateY(50vh); opacity: 0;}
-  to {transform: translateX(0%); opacity: 1;}
-}
+// @keyframes appearance-bottom {
+//   from {transform: translateY(50vh); opacity: 0;}
+//   to {transform: translateX(0%); opacity: 1;}
+// }
 
 
-.bottom-appearance {
-  animation-name: appearance-bottom;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
+// .bottom-appearance {
+//   animation-name: appearance-bottom;
+//   animation-duration: 0.5s;
+//   animation-timing-function: ease-out;
+//   animation-fill-mode: forwards;
+// }
 

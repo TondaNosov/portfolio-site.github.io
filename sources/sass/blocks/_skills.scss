@@ -1,6 +1,6 @@
 .skills {
   background-color: $background-color;
-  padding-bottom: 30px;
+  padding: 40px 5%;
 }
 
 .skills__list {
@@ -8,8 +8,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content:center;
-  
-  margin: 0 3.125%;
 }
 
 .skills__item {
