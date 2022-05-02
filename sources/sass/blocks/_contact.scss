@@ -3,6 +3,7 @@
 
   font-size: 16px;
   line-height: 18px;
+  font-weight: 700;
   text-align: center;
   color: $second-color;
 }
@@ -88,4 +89,14 @@
   background-position: center;
   
   transform: rotate(-90deg);
+}
+
+/* For tablets */
+
+@media (min-width: $tablet-width) {
+  .contact__form {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

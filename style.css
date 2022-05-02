@@ -141,7 +141,7 @@ body {
 }
 
 /* For tablets */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .page-header__background::before {
     width: 500px;
     height: 500px;
@@ -222,7 +222,7 @@ body {
 }
 
 /* For tablets */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .button {
     padding: 12px 20px;
     font-size: 24px;
@@ -353,7 +353,7 @@ body {
 }
 
 /* For tablets */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .main-nav__toggle {
     display: none;
   }
@@ -492,6 +492,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 25px;
+  padding-right: 25px;
 }
 
 .courses__item {
@@ -540,9 +541,51 @@ body {
 
 .courses__img {
   display: block;
+  width: 100%;
   max-width: 400px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+  .courses__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .courses__img {
+    min-width: 400px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .courses__galery {
+    -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+
+/* For desctops */
+@media (min-width: 1200px) {
+  .courses__container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .projects {
@@ -554,13 +597,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*BACKGROUND GRADIENT*/
@@ -736,6 +784,7 @@ body {
   display: block;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 700;
   text-align: center;
   color: #ff445e;
 }
@@ -814,6 +863,15 @@ body {
   background-position: center;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+  .contact__form {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .social-networks {

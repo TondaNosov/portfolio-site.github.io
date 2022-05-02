@@ -25,7 +25,7 @@
         Hello, I'm <span>Anton Nosov</span>.<br>
         I'm a junior web developer.
       </p>
-      <button class="button button--header" type="button" onclick="document.location='#contacts'">Hire me</button>
+      <button class="button button--header" type="button" onclick="document.location='#contact'">Hire me</button>
     </div>
 
     <nav class="page-header__nav main-nav main-nav--close">
@@ -38,7 +38,7 @@
         <li class="main-nav__item"><a href="#about">About</a></li>
         <li class="main-nav__item"><a href="#skills">Skills</a></li>
         <li class="main-nav__item"><a href="#courses">Courses</a></li>
-        <li class="main-nav__item"><a href="#portfolio">Portfolio</a></li>
+        <li class="main-nav__item"><a href="#projects">Portfolio</a></li>
         <li class="main-nav__item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -116,30 +116,34 @@
       <h2 class="section-header">Courses</h2>
       <div class="section-header__underline"></div>
       
-      <ul class="courses__list">
-        <li class="courses__item">
-          <h3>Responsive Web Design Certification</h3>
-          <a href="https://www.freecodecamp.org/">freecodecamp.org</a>
-        </li>
-        <li class="courses__item">
-          <h3>Professional HTML & CSS, level 1, level 2</h3>
-          <a href="https://htmlacademy.ru/">HTML Academy</a>
-        </li>
-        <li class="courses__item">
-          <h3>Modern JavaScript</h3>
-          <a href="https://www.udemy.com/">Udemy</a>
-        </li>
-        <li class="courses__item">
-          <h3>W3schools tutorials</h3>
-          <a href="https://www.w3schools.com/">W3Schools</a>
-        </li>
-      </ul>
-      <img class="courses__img" src="sources/img/freecodecamp-small.png" width="600px" height="auto" alt="FreeCodeCamp certificate">
+      <div class="courses__container">
+        <ul class="courses__list">
+          <li class="courses__item">
+            <h3>Responsive Web Design Certification</h3>
+            <a href="https://www.freecodecamp.org/">freecodecamp.org</a>
+          </li>
+          <li class="courses__item">
+            <h3>Professional HTML & CSS, level 1, level 2</h3>
+            <a href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+          <li class="courses__item">
+            <h3>Modern JavaScript</h3>
+            <a href="https://www.udemy.com/">Udemy</a>
+          </li>
+          <li class="courses__item">
+            <h3>W3schools tutorials</h3>
+            <a href="https://www.w3schools.com/">W3Schools</a>
+          </li>
+        </ul>
+        <div class="courses__galery">
+          <img class="courses__img" src="sources/img/freecodecamp-small.png" width="600px" height="auto" alt="FreeCodeCamp certificate">
+        </div>
+      </div>
 
     </section>
 
     <!-- PROJECTS -->
-    <section class="projects">
+    <section class="projects" id="projects">
       <h2 class="section-header">Projects</h2>
       <div class="section-header__underline"></div>
       <ul class="projects__list">
@@ -180,7 +184,7 @@
       <h2 class="section-header section-header--footer">Contact</h2>
       <div class="section-header__underline section-header__underline--footer"></div>
 
-      <span class="contact__intro">Have a question or want to work together?</span>
+      <span class="contact__intro">Do you want to hire me?</span>
 
       <form class="contact__form" action="https://www.w3schools.com/action_page.php" target="_self" method="post"
         autocomplete="on">
