@@ -69,6 +69,72 @@ body {
   font-family: Raleway, sans-serif;
 }
 
+.ukraine_support_mark {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 145px;
+  height: 75px;
+  background-image: url(sources/img/standwithukraine.jpeg);
+  background-position: center;
+  background-size: cover;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  z-index: 100;
+  -webkit-animation-name: ukraine-mark;
+          animation-name: ukraine-mark;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes ukraine-mark {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes ukraine-mark {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+/* For tablets */
+@media (min-width: 768px) {
+  .ukraine_support_mark {
+    width: 220px;
+    height: 120px;
+  }
+}
+
+/* For desktops */
+@media (min-width: 1200px) {
+  .ukraine_support_mark {
+    top: 50px;
+    left: 0;
+    width: 220px;
+    height: 80px;
+  }
+}
+
 /* For phones */
 .page-header {
   display: -webkit-box;
@@ -94,6 +160,14 @@ body {
   background: linear-gradient(135deg, #2a3247 0%, #4b3c75 100%);
   background-size: 400% 400%;
   overflow: hidden;
+  -webkit-animation-name: animateGradient;
+          animation-name: animateGradient;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .page-header__background::before {
@@ -101,12 +175,12 @@ body {
   position: absolute;
   top: 45%;
   left: 50%;
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
   width: 325px;
   height: 325px;
   background-image: url(sources/svg/hexagon.svg);
   background-size: contain;
-  -webkit-transform: translate(-50%, -45%);
-          transform: translate(-50%, -45%);
 }
 
 .page-header__background::after {
@@ -114,12 +188,12 @@ body {
   position: absolute;
   top: 45%;
   left: 50%;
+  -webkit-transform: translate(22%, -3%);
+          transform: translate(22%, -3%);
   width: 325px;
   height: 325px;
   background-image: url(sources/svg/hexagon.svg);
   background-size: contain;
-  -webkit-transform: translate(22%, -3%);
-          transform: translate(22%, -3%);
 }
 
 .page-header__wrapper {
@@ -129,11 +203,11 @@ body {
 
 .page-header__welcome {
   margin-bottom: 24px;
-  font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #ffffff;
+  font-weight: 400;
   text-align: center;
+  color: #ffffff;
 }
 
 .page-header__welcome span {
@@ -155,9 +229,9 @@ body {
             transform: translate(30%, 0%);
   }
   .page-header__welcome {
-    margin-bottom: 42px;
-    font-size: 42px;
-    line-height: 54px;
+    margin-bottom: 36px;
+    font-size: 36px;
+    line-height: 42px;
   }
 }
 
@@ -175,9 +249,13 @@ body {
     -webkit-transform: translate(22%, -87%);
             transform: translate(22%, -87%);
   }
+  .page-header__welcome {
+    margin-bottom: 42px;
+    font-size: 42px;
+    line-height: 48px;
+  }
 }
 
-/* For phones */
 .button {
   padding: 12px 15px;
   font-size: 16px;
@@ -193,6 +271,12 @@ body {
   background-color: #fda022;
   border: 2px solid #fda022;
   outline: none;
+  cursor: pointer;
+}
+
+.button:active {
+  -webkit-box-shadow: rgba(42, 50, 71, 0.25) 0px 30px 60px -12px inset, rgba(42, 50, 71, 0.3) 0px 18px 36px -18px inset;
+          box-shadow: rgba(42, 50, 71, 0.25) 0px 30px 60px -12px inset, rgba(42, 50, 71, 0.3) 0px 18px 36px -18px inset;
 }
 
 .button--header {
@@ -218,10 +302,9 @@ body {
 .button--header:focus::after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  outline: none;
 }
 
-/* For tablets */
+/* For tablets and desktops*/
 @media (min-width: 768px) {
   .button {
     padding: 12px 20px;
@@ -278,11 +361,11 @@ body {
   transition: 0.3s;
 }
 
-.main-nav__item--active a {
+.main-nav__item:hover a {
   color: #ff445e;
 }
 
-.main-nav__item:hover a {
+.main-nav__item--active a {
   color: #ff445e;
 }
 
@@ -386,6 +469,14 @@ body {
     position: absolute;
     top: 100vh;
     background-color: #141d31;
+  }
+  .main-nav--down {
+    -webkit-animation-name: navDown;
+            animation-name: navDown;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
   .main-nav--fixed {
     position: fixed;
@@ -635,17 +726,6 @@ body {
   }
 }
 
-.page-header__background {
-  -webkit-animation-name: animateGradient;
-          animation-name: animateGradient;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
 /*NAV DOWN*/
 @-webkit-keyframes navDown {
   0% {
@@ -658,15 +738,6 @@ body {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
   }
-}
-
-.main-nav--down {
-  -webkit-animation-name: navDown;
-          animation-name: navDown;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
 }
 
 /* LEFT APPEARANCE */

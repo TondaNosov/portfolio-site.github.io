@@ -42,11 +42,11 @@
   transition: 0.3s;
 }
 
-.main-nav__item--active a {
+.main-nav__item:hover a {
   color: $second-color;
 }
 
-.main-nav__item:hover a {
+.main-nav__item--active a {
   color: $second-color;
 }
 
@@ -164,6 +164,12 @@
     position: absolute;
     top: 100vh; 
     background-color: $base-darker-color;
+  }
+
+  .main-nav--down {
+    animation-name: navDown;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
   }
 
   .main-nav--fixed {

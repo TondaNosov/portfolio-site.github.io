@@ -20,10 +20,7 @@ navToggle.addEventListener("click", function (evt) {
 // NAV POSITION
 
 document.addEventListener("scroll", function() {
-  if (
-    document.documentElement.scrollTop > (header.clientHeight + navBar.clientHeight) && 
-    window.innerWidth >= 1200
-    ) {
+  if (document.documentElement.scrollTop > (header.clientHeight + navBar.clientHeight)) {
    document.querySelector(".main-nav").classList.add("main-nav--fixed"),
    document.querySelector(".main-nav").classList.add("main-nav--down");
   }
@@ -49,22 +46,22 @@ for (let i = 0; i < navBarItemArr.length; i++) {
   });
 }
 
-// SCROLL ANIMATIONS
+// // SCROLL ANIMATIONS
 
-window.onscroll = function() {
+// window.onscroll = function() {
 
-  document.querySelector(".about__header").classList.add("hidden");
-  document.querySelector(".about__underline").classList.add("hidden");
-  document.querySelector(".about__image").classList.add("hidden");
-  document.querySelector(".about__info").classList.add("hidden");
+//   document.querySelector(".about__header").classList.add("hidden");
+//   document.querySelector(".about__underline").classList.add("hidden");
+//   document.querySelector(".about__image").classList.add("hidden");
+//   document.querySelector(".about__info").classList.add("hidden");
 
-  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350 ) 
-  document.querySelector(".about__header").classList.add("left-appearance"),
-  document.querySelector(".about__underline").classList.add("right-appearance");
+//   if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350 ) 
+//   document.querySelector(".about__header").classList.add("left-appearance"),
+//   document.querySelector(".about__underline").classList.add("right-appearance");
 
-  if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450 ) 
-  document.querySelector(".about__image").classList.add("bottom-appearance");
+//   if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450 ) 
+//   document.querySelector(".about__image").classList.add("bottom-appearance");
 
-  if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550 ) 
-  document.querySelector(".about__info").classList.add("bottom-appearance"); 
-};
+//   if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550 ) 
+//   document.querySelector(".about__info").classList.add("bottom-appearance"); 
+// };

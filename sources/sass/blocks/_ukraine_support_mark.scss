@@ -1,0 +1,50 @@
+.ukraine_support_mark {
+  position: absolute;
+
+  bottom: 50px;
+  left: 0;
+
+  width: 145px;
+  height: 75px;
+
+  background-image: url(sources/img/standwithukraine.jpeg);
+  background-position: center;
+  background-size: cover;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  
+  z-index: 100;
+
+  animation-name: ukraine-mark;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes ukraine-mark {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+/* For tablets */
+
+@media (min-width: $tablet-width) {
+  .ukraine_support_mark {
+    width: 220px;
+    height: 120px;
+  }
+}
+
+/* For desktops */
+
+@media (min-width: $desktop-width) {
+  .ukraine_support_mark {
+    top: 50px;
+    left: 0;
+    
+    width: 220px;
+    height: 80px;
+  }
+}
