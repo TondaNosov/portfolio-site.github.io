@@ -1,10 +1,7 @@
+/* OPEN / CLOSE NAV */
+
 let navToggle = document.querySelector('.main-nav__toggle');
 let navBar = document.querySelector('.main-nav');
-let header = document.querySelector(".page-header");
-let navBarItemArr = document.querySelectorAll(".main-nav__item");
-
-
-// OPEN / CLOSE NAV
 
 navToggle.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -17,7 +14,9 @@ navToggle.addEventListener("click", function (evt) {
   };
 });
 
-// NAV POSITION
+/* NAV POSITION */
+
+let header = document.querySelector(".page-header");
 
 document.addEventListener("scroll", function() {
   if (document.documentElement.scrollTop > (header.clientHeight + navBar.clientHeight)) {
@@ -31,37 +30,56 @@ document.addEventListener("scroll", function() {
    }
  });
 
-//  ACTIVE PAGE
+/* ACTIVE PAGE */
 
-for (let i = 0; i < navBarItemArr.length; i++) {
-  navBarItemArr[i].addEventListener("click", function(evt) {
+let navBarItemsArr = document.querySelectorAll(".main-nav__item");
 
-    for (let i = 0; i < navBarItemArr.length; i++) {
-      navBarItemArr[i].classList.remove("main-nav__item--active");
+for (let i = 0; i < navBarItemsArr.length; i++) {
+  navBarItemsArr[i].addEventListener("click", function(evt) {
+
+    for (let i = 0; i < navBarItemsArr.length; i++) {
+      navBarItemsArr[i].classList.remove("main-nav__item--active");
     };
 
-    navBarItemArr[i].classList.add("main-nav__item--active");
+    navBarItemsArr[i].classList.add("main-nav__item--active");
     navBar.classList.remove("main-nav--open");
     navBar.classList.add("main-nav--close");
   });
 }
 
-// // SCROLL ANIMATIONS
+/* SCROLL ANIMATIONS */
 
-// window.onscroll = function() {
+const animItems = document.querySelectorAll(".--anim-items");
 
-//   document.querySelector(".about__header").classList.add("hidden");
-//   document.querySelector(".about__underline").classList.add("hidden");
-//   document.querySelector(".about__image").classList.add("hidden");
-//   document.querySelector(".about__info").classList.add("hidden");
+if (animItems.length > 0) {
+  window.addEventListener('scroll', animOnScroll);
 
-//   if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350 ) 
-//   document.querySelector(".about__header").classList.add("left-appearance"),
-//   document.querySelector(".about__underline").classList.add("right-appearance");
+  function animOnScroll(param) {
+    for (let i = 0; i < animItems.length; i++) {
+      const animItem = animItems[i];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = offset(animItem).top;
+      const animStart = 4;
 
-//   if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450 ) 
-//   document.querySelector(".about__image").classList.add("bottom-appearance");
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
 
-//   if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550 ) 
-//   document.querySelector(".about__info").classList.add("bottom-appearance"); 
-// };
+      if ( (scrollY > (animItemOffset - animItemPoint)) && (scrollY < (animItemOffset + animItem.offsetHeight)) ) {
+        animItem.classList.add('--animate');
+      } else {
+        if (!animItem.classList.contains('--anim-no-hide')) {
+          animItem.classList.remove('--animate');
+        }
+      }
+    }
+  }
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {top: rect.top + scrollTop}
+  }
+
+  setTimeout(() => {animOnScroll()}, 500);
+}

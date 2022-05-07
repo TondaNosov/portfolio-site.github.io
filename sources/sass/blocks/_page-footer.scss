@@ -17,3 +17,12 @@
 .page-footer__info span {
   color: $second-color;
 }
+
+@media (min-width: $desktop-width) {
+  .page-footer {  
+    padding-top: 80px;
+  }
+  .page-footer__info {
+    padding-bottom: 80px;
+  }  
+}

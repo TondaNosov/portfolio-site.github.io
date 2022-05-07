@@ -11,6 +11,26 @@
 
 .courses__item {
   position: relative;
+  
+  transform: translate(-120%, 0);
+  opacity: 0;
+  transition: 1.5s ease-in;
+}
+
+.--animate .courses__item {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.--animate {
+  & .courses__item {
+    @for $index from 1 through 4 {
+      $delay: $index * 0.4 - 0.4;
+      &:nth-child(#{$index}) {
+        transition: 0.5s ease-in #{$delay + s};
+      }
+    }
+  }
 }
 
 .courses__item::before {
@@ -59,13 +79,29 @@
   }
 }
 
+.courses__galery {
+  overflow: hidden;
+}
+
 .courses__img {
-  display: block;
   width: 100%;
   max-width: 400px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+
+  transform: translate(120%, 120%);
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+.--animate .courses__img {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.8s ease-in-out;
 }
 
 /* For tablets */
@@ -86,14 +122,15 @@
     margin-right: 0;
   }
 
-  .courses__galery {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  }
 }
 
 /* For desctops */
 
 @media (min-width: $desktop-width) {
+  .courses {
+    padding: 80px 0;
+  }
+  
   .courses__container {
     max-width: 1200px;
     margin-left: auto;

@@ -1,6 +1,25 @@
 .card {
   position: relative;
   overflow: hidden;
+
+  transform: translate(0, 120%);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.card.--animate {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.card.--animate {
+  @for $index from 1 through 3 {
+    &:nth-child(#{$index}) {
+      $delay: $index * 0.15 - 0.15;
+      transition: 0.8s ease-out #{$delay + s};
+    }
+  } 
 }
 
 .card__wrap {

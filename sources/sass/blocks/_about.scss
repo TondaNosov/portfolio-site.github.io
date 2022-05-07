@@ -1,6 +1,8 @@
 .about {
   padding: 40px 5%;
   text-align: center;
+
+  overflow: hidden;
 }
 
 .about__info {
@@ -9,4 +11,30 @@
   font-size: 16px;
   line-height: 25px;
   text-align: left;
+}
+
+.about__image, 
+.about__info {
+  transform: translate(0, 120%);
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+.--animate .about__image,
+.--animate .about__info {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.8s ease-in-out;
+}
+
+
+
+@media (min-width: $desktop-width) {
+  .about {
+    padding: 80px 0;
+    padding-top: 80px + 53px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

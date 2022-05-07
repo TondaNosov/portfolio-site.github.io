@@ -12,20 +12,83 @@
 
 .skills__item {
   width: 140px;
+  height: auto;
   
   text-align: center;
+
 }
 
 .skills__item img {  
   width: 120px;
   height: 120px;
   object-fit: contain;
+
+  transform: rotateY(90deg);
+  opacity: 0;
+  transition: 0.3s ease;
 }
 
-.skills__item p {
+.--animate .skills__item img {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+.--animate .skills__item {
+  @for $index from 1 through 9 {
+    $delay: $index * 0.2 - 0.2;
+    &:nth-child(#{$index}) {
+      & img {
+      transition: 0.3s ease #{$delay + s};
+      }
+    }
+  }
+}
+
+.skills__item h3 {
   padding: 10px 0 30px 0;
 
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
+
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.skills__item {
+  @for $index from 1 through 9 {
+    $delay: 9 * 0.2 - 0.2 * $index;
+    &:nth-child(#{$index}) {
+      & h3 {
+      transition: 0.8s ease #{$delay + s};
+      }
+    }
+  }
+}
+
+.--animate .skills__item h3 {
+  opacity: 1;
+}
+
+.--animate .skills__item {
+  @for $index from 1 through 9 {
+    $delay: $index * 0.2 + 0.1;
+    &:nth-child(#{$index}) {
+      & h3 {
+      transition: 0.8s ease #{$delay + s};
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .skills {
+    padding: 80px 0;
+
+  }
+  .skills__list {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

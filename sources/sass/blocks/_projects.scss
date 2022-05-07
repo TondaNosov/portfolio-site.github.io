@@ -1,6 +1,8 @@
 .projects {
   background-color: $background-color;
   padding: 40px 5%;
+
+  overflow: hidden;
 }
 
 .projects__list {
@@ -11,4 +13,8 @@
   justify-content: center;
 }
 
-
+@media (min-width: $desktop-width) {
+  .projects {
+    padding: 80px 0;
+  }
+}

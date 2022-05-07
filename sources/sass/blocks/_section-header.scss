@@ -6,6 +6,16 @@
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+
+  transform: translate(-50vh, 0);
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+.section-header.--animate {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.8s ease-in-out;
 }
 
 .section-header__underline {
@@ -17,6 +27,16 @@
   margin-bottom: 40px;
 
   background: $text-color;
+
+  transform: translate(-50vh, 0);
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+.section-header__underline.--animate {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: 0.8s ease-in-out 0.3s;
 }
 
 .section-header--footer {
@@ -25,4 +45,10 @@
 
 .section-header__underline--footer {
   background: $white-color;
+}
+
+@media (min-width: $desktop-width) {
+  .section-header__underline {
+    margin-bottom: 80px;
+  }
 }
