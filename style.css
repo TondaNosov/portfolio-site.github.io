@@ -1264,6 +1264,14 @@ body {
   height: 50px;
   width: 50px;
   background-color: #ff445e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contact__home-button:hover, .contact__home-button:focus {
+  cursor: pointer;
+  background-color: #fda022;
+  outline: none;
 }
 
 .contact__home-button::before {
@@ -1327,9 +1335,21 @@ body {
   width: 50px;
   height: 50px;
   background-color: #2a3247;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.social-networks__item::before {
+.social-networks__item:hover, .social-networks__item:focus {
+  background-color: #fda022;
+}
+
+.social-networks__item a {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.social-networks__link::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1343,14 +1363,14 @@ body {
   background-position: center;
 }
 
-.social-networks__item--linkedin::before {
+.social-networks__link--linkedin::before {
   background-image: url(sources/svg/linkedin.svg);
 }
 
-.social-networks__item--facebook::before {
+.social-networks__link--facebook::before {
   background-image: url(sources/svg/facebook.svg);
 }
 
-.social-networks__item--instagram::before {
+.social-networks__link--instagram::before {
   background-image: url(sources/svg/instagram.svg);
 }

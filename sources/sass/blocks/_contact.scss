@@ -83,6 +83,15 @@
   width: 50px;
   
   background-color: $second-color;
+  transition: 0.3s;
+
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $third-color;
+    outline: none;
+  }
 }
 
 .contact__home-button::before {
