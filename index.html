@@ -17,7 +17,6 @@
 
 <body>
   <!-- HEADER -->
-  <div class="ukraine_support_mark --anim-items --anim-no-hide"></div>
 
   <header class="page-header">
     <div class="page-header__background"></div>
@@ -53,7 +52,7 @@
       <h2 class="section-header --anim-items --anim-no-hide">About</h2>
       <div class="about__underline section-header__underline --anim-items --anim-no-hide"></div>
       <div class="about__container --anim-items --anim-no-hide">
-        <img class="about__image" src="sources/img/ANTON_600_600.jpg" width="250px" height="250px"
+        <img class="about__image" src="sources/img/Anton_Nosov_5.png" width="300px" height="300px"
         alt="Photo of Anton Nosov">
       </div>
       <div class="about__container --anim-items --anim-no-hide">
@@ -134,8 +133,10 @@
           </li>
         </ul>
         <div class="courses__galery --anim-items --anim-no-hide">
-          <img class="courses__img" src="sources/img/freecodecamp-small.png" width="600px" height="auto"
+          <a class="courses__link --popup-link" href="#popup-certificate">
+            <img class="courses__img" src="sources/img/freecodecamp-small.png" width="600px" height="auto"
             alt="FreeCodeCamp certificate">
+          </a>
         </div>
       </div>
     </section>
@@ -232,9 +233,32 @@
       <span>©2022</span>
     </div>
   </footer>
+  <!-- POPUP -->
+  <!-- <div id="popup-certificate" class="popup">
+    <button class="popup__area" type="button" onclick="document.location='#courses'"></button>
+    <div class="popup__body">
+      <div class="popup__content">
+        <button class="popup__close" type="button" onclick="document.location='#courses'"></button>
+        <div class="popup__image">
+          <img src="sources/img/freecodecamp.png" width="1000px" height="auto" alt="FreeCodeCamp certificate">
+        </div>
+      </div>
+    </div>
+  </div> -->
 
+  <div id="popup-certificate" class="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <button class="popup__close" type="button"></button>
+        <div class="popup__image">
+          <img src="sources/img/freecodecamp.png" width="1000px" height="auto" alt="FreeCodeCamp certificate">
+        </div>
+      </div>
+    </div>
+    
   <script src="sources/js/index.js"></script>
 
+<!--  -->
 </body>
 
 </html>

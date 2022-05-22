@@ -83,3 +83,51 @@ if (animItems.length > 0) {
 
   setTimeout(() => {animOnScroll()}, 500);
 }
+
+/* POPUP */
+
+const popupLinks = document.querySelectorAll(".--popup-link");
+
+if (popupLinks.length > 0) {
+  for (let i = 0; i < popupLinks.length; i++) {
+    const popupLink = popupLinks[i];
+    popupLink.addEventListener("click", function(e) {
+      const popupName = popupLink.getAttribute('href').replace('#', '');
+      const curentPopup = document.getElementById(`${popupName}`);
+      popupOpen(curentPopup);
+      e.preventDefault();
+    });
+  }
+}
+
+function popupOpen(curentPopup) {
+  curentPopup.classList.add("--open");
+  curentPopup.addEventListener("click", function(e) {
+    if (!e.target.closest(".popup__content")) {
+      popupClose(e.target.closest(".popup"));
+    }
+  });
+}
+
+function popupClose(popupActive) {
+  popupActive.classList.remove("--open");
+}
+
+const popupCloseIcons = document.querySelectorAll(".popup__close");
+
+if (popupCloseIcons.length > 0) {
+  for (let i = 0; i < popupCloseIcons.length; i++) {
+    const el = popupCloseIcons[i];
+    el.addEventListener("click", function(e) {
+      popupClose(el.closest(".popup"));
+      e.preventDefault();
+    });
+  }
+}
+
+document.addEventListener("keydown", function(e) {
+  if (e.which === 27) {
+    const popupActive = document.querySelector(".popup.--open");
+    popupClose(popupActive);
+  }
+})

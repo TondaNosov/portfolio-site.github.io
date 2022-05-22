@@ -13,6 +13,11 @@
   text-align: left;
 }
 
+.about__image {
+  width: 300px;
+  height: auto;
+}
+
 .about__image, 
 .about__info {
   transform: translate(0, 120%);
@@ -27,8 +32,6 @@
   transition: 0.8s ease-in-out;
 }
 
-
-
 @media (min-width: $desktop-width) {
   .about {
     padding: 80px 0;
@@ -36,5 +39,10 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .about__image {
+    width: 350px;
+    height: auto;
   }
 }
