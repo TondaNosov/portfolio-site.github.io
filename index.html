@@ -16,8 +16,8 @@
 </head>
 
 <body>
-  <!-- HEADER -->
 
+  <!-- HEADER -->
   <header class="page-header">
     <div class="page-header__background"></div>
 
@@ -47,6 +47,7 @@
   <!-- MAIN -->
   <main class="page-main">
     <h1 class="visually-hidden">Anton Nosov is looking for a job as a web developer</h1>
+
     <!-- ABOUT -->
     <section class="about" id="about">
       <h2 class="section-header --anim-items --anim-no-hide">About</h2>
@@ -152,7 +153,7 @@
           <div class="card__wrap">
             <h3 class="card__header">Portfolio Website</h3>
             <span class="card__desc">HTML / CSS / JS</span>
-            <button class="card__button button" type="button">Learn more</button>
+            <a class="card__button button --popup-link" type="button" href="#popup-project-1">Learn more</a>
           </div>
         </li>
         <li class="projects__item card --anim-items --anim-no-hide">
@@ -187,12 +188,13 @@
       <div class="test">
         <span class="contact__intro --anim-items --anim-no-hide">Do you want to hire me?</span>
       </div>
-
-      <form class="contact__form --anim-items --anim-no-hide" action="https://www.w3schools.com/action_page.php" target="_self" method="post"
+      
+      <!-- FORM -->
+      <form class="contact__form --anim-items --anim-no-hide" id="form" action="https://www.w3schools.com/action_page.php" target="_self" method="post"
         autocomplete="on">
-        <input class="contact__input" type="text" id="name" name="Name" placeholder="Name" required>
+        <input class="contact__input" type="text" id="name" name="name" placeholder="Name" required>
         <input class="contact__input" type="text" id="company" name="company" placeholder="Company">
-        <input class="contact__input" type="email" id="email" name="E-mail" placeholder="E-mail"
+        <input class="contact__input" type="email" id="email" name="email" placeholder="E-mail"
           pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_.]+" required>
         <textarea class="contact__message" name="message" placeholder="Your message"></textarea>
         <button class="button contact__button" type="submit">Submit</button>
@@ -233,19 +235,8 @@
       <span>©2022</span>
     </div>
   </footer>
-  <!-- POPUP -->
-  <!-- <div id="popup-certificate" class="popup">
-    <button class="popup__area" type="button" onclick="document.location='#courses'"></button>
-    <div class="popup__body">
-      <div class="popup__content">
-        <button class="popup__close" type="button" onclick="document.location='#courses'"></button>
-        <div class="popup__image">
-          <img src="sources/img/freecodecamp.png" width="1000px" height="auto" alt="FreeCodeCamp certificate">
-        </div>
-      </div>
-    </div>
-  </div> -->
 
+  <!-- POPUP -->
   <div id="popup-certificate" class="popup">
     <div class="popup__body">
       <div class="popup__content">
@@ -255,10 +246,24 @@
         </div>
       </div>
     </div>
+  </div>
+
+    <div id="popup-project-1" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <button class="popup__close" type="button"></button>
+          <div class="popup__image">
+            <img src="sources/img/cat-energy.png" width="1000px" height="auto" alt="Cat cat-energy">
+          </div>
+          <h2 class="popup__header">Web Portfolio site</h1>
+          <p class="popup__info">
+            Bla bla Bla <!--Add text-->
+          </p>
+          <a class="popup__button-link" href="#">View site</a> <!--Add link-->
+        </div>
+      </div>
+    </div>
     
   <script src="sources/js/index.js"></script>
-
-<!--  -->
 </body>
-
 </html>

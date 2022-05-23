@@ -1359,17 +1359,6 @@ body {
   transition: 0.5s ease;
 }
 
-.popup.--open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.popup.--open .popup__content {
-  -webkit-transform: translate(0px, 0px) perspective(600px) rotateX(0deg);
-          transform: translate(0px, 0px) perspective(600px) rotateX(0deg);
-  opacity: 1;
-}
-
 .popup__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1386,11 +1375,22 @@ body {
 
 .popup__content {
   position: relative;
-  -webkit-transform: translate(0px, -100%) perspective(600px) rotateX(45deg);
-          transform: translate(0px, -100%) perspective(600px) rotateX(45deg);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   opacity: 0;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.popup.--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.--open .popup__content {
+  -webkit-transform: scale(100%);
+          transform: scale(100%);
+  opacity: 1;
 }
 
 .popup__close {

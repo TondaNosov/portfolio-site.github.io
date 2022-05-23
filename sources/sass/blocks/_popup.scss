@@ -17,16 +17,6 @@
   transition: 0.5s ease;
 }
 
-.popup.--open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.popup.--open .popup__content {
-  transform: translate(0px, 0px) perspective(600px) rotateX(0deg);
-  opacity: 1;
-}
-
 .popup__body {
   display: flex;
   justify-content: center;
@@ -39,9 +29,19 @@
 .popup__content {
   position: relative;
 
-  transform: translate(0px, -100%) perspective(600px) rotateX(45deg);
+  transform: scale(0);
   opacity: 0;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
+}
+
+.popup.--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.--open .popup__content {
+  transform: scale(100%);
+  opacity: 1;
 }
 
 .popup__close {
