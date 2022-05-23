@@ -136,26 +136,26 @@ document.addEventListener("keydown", function(e) {
 /* FORM */
 
 
-document.addEventListener("DOMContentLoaded", function () {     // Проверка на то, что документ уже загружен
-  const form = document.getElementById('form');
-  form.addEventListener('submit', formSend);
+// document.addEventListener("DOMContentLoaded", function () {     // Проверка на то, что документ уже загружен
+//   const form = document.getElementById('form');
+//   form.addEventListener('submit', formSend);
 
-  async function formSend(e) {
-    e.preventDefault();
+//   async function formSend(e) {
+//     e.preventDefault();
 
-    let formData = new FormData(form);
+//     let formData = new FormData(form);
     
-    let response = await fetch('sendmail.php', {
-      method: 'POST',
-      body: formData
-    });
+//     let response = await fetch('sendmail.php', {
+//       method: 'POST',
+//       body: formData
+//     });
 
-    if (response.ok) {
-      let result = await response.json();
-      alert(result.message);
-      form.reset();
-    } else {
-      alert("Something wrong!");
-    }
-  }
-});
+//     if (response.ok) {
+//       let result = await response.json();
+//       alert(result.message);
+//       form.reset();
+//     } else {
+//       alert("Something wrong!");
+//     }
+//   }
+// });
