@@ -81,39 +81,39 @@
       <div class="section-header__underline --anim-items --anim-no-hide"></div>
       <ul class="skills__list --anim-items --anim-no-hide">
         <li class="skills__item">
-          <img src="sources/svg/html.svg" width="140px" height="auto" alt="HTML logotype">
+          <img src="sources/svg/html.svg" width="140" height="auto" alt="HTML logotype">
           <h3>HTML5</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/css.svg" width="140px" height="auto" alt="CSS logotype">
+          <img src="sources/svg/css.svg" width="140" height="auto" alt="CSS logotype">
           <h3>CSS3</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/js.svg" width="140px" height="auto" alt="JS logotype">
+          <img src="sources/svg/js.svg" width="140" height="auto" alt="JS logotype">
           <h3>Javascript Basics</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/sass.svg" width="140px" height="auto" alt="SASS logotype">
+          <img src="sources/svg/sass.svg" width="140" height="auto" alt="SASS logotype">
           <h3>Sass Basics</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/git.svg" width="140px" height="auto" alt="GIT logotype">
+          <img src="sources/svg/git.svg" width="140" height="auto" alt="GIT logotype">
           <h3>Git Basics</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/bem.svg" width="140px" height="auto" alt="BEM logotype">
+          <img src="sources/svg/bem.svg" width="140" height="auto" alt="BEM logotype">
           <h3>BEM CSS</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/responsive-design.svg" width="140px" height="auto" alt="Responsive Web Design logotype">
+          <img src="sources/svg/responsive-design.svg" width="140" height="auto" alt="Responsive Web Design logotype">
           <h3>Responsive Web Design</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/avocode.svg" width="140px" height="auto" alt="Avocode logotype">
+          <img src="sources/svg/avocode.svg" width="140" height="auto" alt="Avocode logotype">
           <h3>Avocode</h3>
         </li>
         <li class="skills__item">
-          <img src="sources/svg/photoshop.svg" width="140px" height="auto" alt="Photoshop logotype">
+          <img src="sources/svg/photoshop.svg" width="140" height="auto" alt="Photoshop logotype">
           <h3>Photoshop</h3>
         </li>
       </ul>
@@ -145,8 +145,18 @@
         </ul>
         <div class="courses__galery --anim-items --anim-no-hide">
           <a class="courses__link --popup-link" href="#popup-certificate">
-            <img class="courses__img" src="sources/img/freecodecamp-small.png" width="600px" height="auto"
-            alt="FreeCodeCamp certificate">
+            <picture>
+              <source 
+                type="image/webp" 
+                media="(min-width: 1200px)" 
+                srcset="sources/img/freeCodeCamp_certificate_desktop_retina.webp 2x,
+                        sources/img/freeCodeCamp_certificate_desktop.webp 1x">
+              <img 
+                srcset="sources/img/freeCodeCamp_certificate_mobile_retina.webp 2x" 
+                src="sources/img/freeCodeCamp_certificate_mobile.webp" 
+                class="courses__img" 
+                alt="FreeCodeCamp certificate">
+            </picture>    
           </a>
         </div>
       </div>
@@ -158,8 +168,13 @@
       <div class="section-header__underline --anim-items --anim-no-hide"></div>
       <ul class="projects__list">
         <li class="projects__item card --anim-items --anim-no-hide">
-          <img class="card__image" src="sources/img/cat-energy-crop.png" width="400" height="auto"
-            alt="Portfolio Website">
+          <picture>
+            <img 
+              srcset="sources/img/portfolio_800.webp 2x" 
+              src="sources/img/portfolio_400.webp" 
+              class="card__image" 
+              alt="Portfolio site">
+          </picture>
           <div class="card__wrap">
             <h3 class="card__header">Portfolio Website</h3>
             <span class="card__desc">HTML / CSS / JS</span>
@@ -167,8 +182,13 @@
           </div>
         </li>
         <li class="projects__item card --anim-items --anim-no-hide">
-          <img class="card__image" src="sources/img/cat-energy-crop.png" width="400" height="auto"
-            alt="Portfolio Website">
+          <picture>
+            <img 
+              srcset="sources/img/cat-energy_800.webp 2x" 
+              src="sources/img/cat-energy_400.webp" 
+              class="card__image" 
+              alt="Cat Energy landing page">
+          </picture>
           <div class="card__wrap">
             <h3 class="card__header">Portfolio Website</h3>
             <span class="card__desc">HTML / CSS / JS</span>
@@ -176,8 +196,13 @@
           </div>
         </li>
         <li class="projects__item card --anim-items --anim-no-hide">
-          <img class="card__image" src="sources/img/cat-energy-crop.png" width="400" height="auto"
-            alt="Portfolio Website">
+          <picture>
+            <img 
+              srcset="sources/img/gllacy_800.webp 2x" 
+              src="sources/img/gllacy_400.webp" 
+              class="card__image" 
+              alt="Gllasy landing page">
+          </picture>
           <div class="card__wrap">
             <h3 class="card__header">Portfolio Website</h3>
             <span class="card__desc">HTML / CSS / JS</span>
@@ -252,7 +277,7 @@
       <div class="popup__content">
         <button class="popup__close" type="button"></button>
         <div class="popup__image">
-          <img src="sources/img/freecodecamp.png" width="1000px" height="auto" alt="FreeCodeCamp certificate">
+          <img src="sources/img/freeCodeCamp_certificate_desktop_retina.webp" width="1000" height="auto" alt="FreeCodeCamp certificate">
         </div>
       </div>
     </div>
@@ -263,7 +288,7 @@
         <div class="popup__content">
           <button class="popup__close" type="button"></button>
           <div class="popup__image">
-            <img src="sources/img/cat-energy.png" width="1000px" height="auto" alt="Cat cat-energy">
+            <img src="sources/img/portfolio_original.webp" width="1000" height="auto" alt="Portfolio site">
           </div>
           <h2 class="popup__header">Web Portfolio site</h1>
           <p class="popup__info">

@@ -46,13 +46,16 @@
 
 .popup__close {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 10px;
 
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 
   cursor: pointer;
+
+  background-color: $second-color;
+  border-radius: 5px;
 
   &::before {
     content: "";
@@ -86,5 +89,7 @@
 
 .popup__image img {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
+  
+  border-radius: 5px;
 }

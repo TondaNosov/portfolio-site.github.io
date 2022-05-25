@@ -1395,11 +1395,13 @@ body {
 
 .popup__close {
   position: absolute;
-  right: 5px;
+  right: 10px;
   top: 10px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  background-color: #ff445e;
+  border-radius: 5px;
 }
 
 .popup__close::before {
@@ -1428,5 +1430,6 @@ body {
 
 .popup__image img {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
+  border-radius: 5px;
 }
