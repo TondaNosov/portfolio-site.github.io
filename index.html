@@ -53,8 +53,18 @@
       <h2 class="section-header --anim-items --anim-no-hide">About</h2>
       <div class="about__underline section-header__underline --anim-items --anim-no-hide"></div>
       <div class="about__container --anim-items --anim-no-hide">
-        <img class="about__image" src="sources/img/Anton_Nosov_5.png" width="300px" height="300px"
-        alt="Photo of Anton Nosov">
+        <picture>
+          <source 
+            type="image/webp" 
+            media="(min-width: 1200px)" 
+            srcset="sources/img/Anton_Nosov_desktop_retina.webp 2x,
+                    sources/img/Anton_Nosov_desktop.webp 1x">
+          <img 
+            srcset="sources/img/Anton_Nosov_mobile_retina.webp 2x" 
+            src="sources/img/Anton_Nosov_mobile.webp" 
+            class="about__image" 
+            alt="Photo of Anton Nosov">
+        </picture>
       </div>
       <div class="about__container --anim-items --anim-no-hide">
         <p class="about__info">
