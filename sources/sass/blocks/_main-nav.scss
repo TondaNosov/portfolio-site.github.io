@@ -28,22 +28,33 @@
 }
 
 .main-nav__item {
-  padding: 12px 12px;
-
   text-align: center;
 }
 
 .main-nav__item a {
+  display: block;
+
+  padding: 12px 12px;
+
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: $white-color;
-  
+
   transition: 0.3s;
 }
 
 .main-nav__item:hover a {
   color: $second-color;
+}
+
+.main-nav__item a:focus {
+  background-color: $second-color;
+  color: $base-color;
+  
+  outline: none;
+
+  text-shadow: 0px 0px 1px $base-color;
 }
 
 .main-nav__item--active a {
@@ -152,7 +163,7 @@
     border-top: none;
   }
 
-  .main-nav__item {
+  .main-nav__item a {
     padding: 15px 20px;
   }
 }

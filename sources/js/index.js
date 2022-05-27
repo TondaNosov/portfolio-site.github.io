@@ -84,6 +84,23 @@ if (animItems.length > 0) {
   setTimeout(() => {animOnScroll()}, 500);
 }
 
+/* STYLE PARENT ELEMENT WHILE FOCULINS A CHILD ELEMENT */
+
+const cardButtons = document.querySelectorAll(".card__button");
+
+if (cardButtons.length > 0) {
+  for (let i = 0; i < cardButtons.length; i++) {
+    let cardButton = cardButtons[i];
+    cardButton.addEventListener("focus", function() {
+      cardButton.closest(".card__wrap").classList.add("--focused");
+    });
+    cardButton.addEventListener("focusout", function() {
+      cardButton.closest(".card__wrap").classList.remove("--focused");
+    });
+
+  }
+}
+
 /* POPUP */
 
 const popupLinks = document.querySelectorAll(".--popup-link");

@@ -1,5 +1,7 @@
 .courses {
   padding: 40px 5%;
+  overflow: hidden;
+
 }
 
 .courses__list {
@@ -74,24 +76,31 @@
   &:hover {
     color: $second-color;
   }
+  &:focus {
+    color: $second-color;
+    outline: none;
+  }
   &:active {
     text-shadow: 0 0 2px $second-color;
   }
 }
 
-.courses__galery {
-  overflow: hidden;
+.courses__link {
+  display: block;
+}
+
+.courses__link:focus {
+  outline: 5px solid $second-color;
 }
 
 .courses__img {
+  display: block;
+
   width: 100%;
   max-width: 400px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
 
   transform: translate(120%, 120%);
   opacity: 0;

@@ -282,11 +282,12 @@ body {
 }
 
 .main-nav__item {
-  padding: 12px 12px;
   text-align: center;
 }
 
 .main-nav__item a {
+  display: block;
+  padding: 12px 12px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -297,6 +298,13 @@ body {
 
 .main-nav__item:hover a {
   color: #ff445e;
+}
+
+.main-nav__item a:focus {
+  background-color: #ff445e;
+  color: #2a3247;
+  outline: none;
+  text-shadow: 0px 0px 1px #2a3247;
 }
 
 .main-nav__item--active a {
@@ -392,7 +400,7 @@ body {
     margin-top: 0px;
     border-top: none;
   }
-  .main-nav__item {
+  .main-nav__item a {
     padding: 15px 20px;
   }
 }
@@ -741,6 +749,7 @@ body {
 
 .courses {
   padding: 40px 5%;
+  overflow: hidden;
 }
 
 .courses__list {
@@ -826,22 +835,30 @@ body {
   color: #ff445e;
 }
 
+.courses__item a:focus {
+  color: #ff445e;
+  outline: none;
+}
+
 .courses__item a:active {
   text-shadow: 0 0 2px #ff445e;
 }
 
-.courses__galery {
-  overflow: hidden;
+.courses__link {
+  display: block;
+}
+
+.courses__link:focus {
+  outline: 5px solid #ff445e;
 }
 
 .courses__img {
+  display: block;
   width: 100%;
   max-width: 400px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   -webkit-transform: translate(120%, 120%);
           transform: translate(120%, 120%);
   opacity: 0;
@@ -1069,9 +1086,25 @@ body {
   opacity: 1;
 }
 
+.card:focus {
+  outline: none;
+}
+
+.card:focus .card__wrap {
+  outline: none;
+  opacity: 1;
+}
+
 .card:hover .card__header,
 .card:hover .card__desc,
 .card:hover .card__button {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card:focus .card__header,
+.card:focus .card__desc,
+.card:focus .card__button {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -1080,6 +1113,29 @@ body {
   background-color: #ff445e;
   border-color: #ff445e;
   color: #ffffff;
+}
+
+.card__button:hover .card {
+  opacity: 1;
+}
+
+.card__wrap.--focused {
+  opacity: 1;
+}
+
+.card__wrap.--focused .card__header {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card__wrap.--focused .card__desc {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card__wrap.--focused .card__button {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .page-footer {
