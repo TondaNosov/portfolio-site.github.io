@@ -148,3 +148,11 @@ document.addEventListener("keydown", function(e) {
     popupClose(popupActive);
   }
 });
+
+/* RESET FORM */
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", function(e) {
+  form.reset();
+});
