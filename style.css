@@ -1043,6 +1043,13 @@ body {
   transition: 0.35s ease-in-out;
 }
 
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
 .card__header {
   margin: 0;
   margin-bottom: 20px;
