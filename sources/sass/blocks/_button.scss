@@ -27,23 +27,24 @@
 .button--header {
   position: relative;
   padding-right: 40px;
-}
 
-.button--header::after {
-  content: "";
+  &::after {
+    content: "";
 
-  position: absolute;
-  top: 11px;
-  right: 11px;
-
-  width: 18px;
-  height: 18px;
-
-  background-image: url(sources/svg/arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-
-  transition: 0.25s;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+  
+    width: 18px;
+    height: 18px;
+  
+    background-image: url(sources/svg/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    transition: 0.25s;
+  
+  }
 }
 
 .button--header:hover::after,
@@ -63,10 +64,10 @@
 
   .button--header {
     padding-right: 50px;
-  }
 
-  .button--header::after {
-    top: 15px;
-    right: 15px;
+    &::after {
+      top: 15px;
+      right: 15px;
+    }
   }
 }

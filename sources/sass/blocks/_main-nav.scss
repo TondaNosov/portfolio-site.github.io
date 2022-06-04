@@ -7,7 +7,7 @@
   background-color: $base-color;
   border-bottom: 3px solid $third-color;
 
-  z-index: 100;
+  z-index: 2;
 }
 
 .main-nav__list {
@@ -15,16 +15,16 @@
 
   display: flex;
   flex-direction: column;
-
+  
   height: 267px;
   margin-top: 44px;
 
   background-color: $base-darker-color;
   border-top: 3px solid $third-color;
 
-  overflow: hidden;
-
   transition: 0.3s;
+  
+  overflow: hidden;
 }
 
 .main-nav__item {
@@ -61,23 +61,7 @@
   color: $second-color;
 }
 
-/* MAIN-NAV--CLOSE */
-
-.main-nav--close {
-  height: 47px;
-}
-
-.main-nav--close .main-nav__list {
-  height: 0;
-}
-
-/* MAIN-NAV--OPEN */
-
-.main-nav--open {
-  border-bottom: none;
-}
-
-/* TOGGLE */
+// toggle
 
 .main-nav__toggle {
   position: absolute;
@@ -90,52 +74,72 @@
   cursor: pointer;
 }
 
-.main-nav--open .main-nav__toggle:before {
-  content: "";
+// close navigation bar
 
-  position: absolute;
-  top: 13px;
-  right: 0px;
-
-  width: 30px;
-  height: 3px;
-
-  background-color: $white-color;
-
-  transform: rotate(45deg);
-  transition: 0.25s;
+.main-nav--close {
+  height: 47px;
 }
 
-.main-nav--open .main-nav__toggle::after {
-  content: "";
+.main-nav--close .main-nav__list {
+  height: 0;
+}
+
+.main-nav--close .main-nav__toggle {
+  &:before {
+    content: "";
   
-  position: absolute;
-  top: 13px;
-  right: 0px;
-
-  width: 30px;
-  height: 3px;
-
-  background-color: $white-color;
-
-  transform: rotate(135deg);
-  transition: 0.25s;
+    position: absolute;
+    top: 3px;
+    right: 0px;
+  
+    width: 30px;
+    height: 3px;
+  
+    background-color: $white-color;
+  
+    box-shadow: 0px 10px $white-color, 0px 20px $white-color;
+    transition: 0.25s;
+  }
 }
 
-.main-nav--close .main-nav__toggle::before {
-  content: "";
+// open navigation bar
 
-  position: absolute;
-  top: 3px;
-  right: 0px;
+.main-nav--open {
+  border-bottom: none;
+}
 
-  width: 30px;
-  height: 3px;
+.main-nav--open .main-nav__toggle {
+  &:before {
+    content: "";
+  
+    position: absolute;
+    top: 13px;
+    right: 0px;
+  
+    width: 30px;
+    height: 3px;
+  
+    background-color: $white-color;
+  
+    transform: rotate(45deg);
+    transition: 0.25s;
+  }
 
-  background-color: $white-color;
-
-  box-shadow: 0px 10px $white-color, 0px 20px $white-color;
-  transition: 0.25s;
+  &:after {
+    content: "";
+    
+    position: absolute;
+    top: 13px;
+    right: 0px;
+  
+    width: 30px;
+    height: 3px;
+  
+    background-color: $white-color;
+  
+    transform: rotate(135deg);
+    transition: 0.25s;
+  }
 }
 
 /* For tablets */
@@ -192,5 +196,9 @@
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  @keyframes navDown {
+    0% {transform: translateY(-100px);}
   }
 }

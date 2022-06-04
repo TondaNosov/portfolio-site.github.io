@@ -1,5 +1,3 @@
-/* For phones */
-
 .page-header {
   display: flex;
   flex-direction: column;
@@ -18,12 +16,12 @@
   background: linear-gradient(135deg, $base-color 0%, $base-ligter-color 100%);
   background-size: 400% 400%;
   
-  overflow: hidden;
-
   animation-name: animateGradient;
   animation-duration: 5s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -55,8 +53,14 @@
   }
 }
 
+@keyframes animateGradient {
+  0% {background-position: 0% 0%;}
+  50% {background-position: 100% 100%;}
+  100% {background-position: 0% 0%;}
+}
+
 .page-header__wrapper {
-  z-index: 100;
+  z-index: 2;
   text-align: center;
 }
 
@@ -79,14 +83,14 @@
 @media (min-width: $tablet-width) {
   .page-header__background {
     &::before {
+    transform: translate(30%, -84%);
     width: 500px;
     height: 500px;
-    transform: translate(30%, -84%);
     }
     &::after {
+      transform: translate(30%, 0%);
       width: 500px;
       height: 500px;
-      transform: translate(30%, 0%);
     }
   }
 
@@ -103,14 +107,14 @@
 @media (min-width: $desktop-width) {
   .page-header__background {
     &::before {
+      transform: translate(-50%, -45%);
       width: 700px;
       height: 700px;
-      transform: translate(-50%, -45%);
     }
     &::after {
+      transform: translate(22%, -87%);
       width: 700px;
       height: 700px;
-      transform: translate(22%, -87%);
     }
   }
 
