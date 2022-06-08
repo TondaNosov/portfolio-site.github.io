@@ -86,6 +86,7 @@ body {
           justify-content: center;
   height: 100vh;
   overflow: hidden;
+  background-color: #72fa7d;
 }
 
 .page-header__background {
@@ -477,6 +478,7 @@ body {
   padding: 40px 5%;
   text-align: center;
   overflow: hidden;
+  background-color: salmon;
 }
 
 .about__image {
