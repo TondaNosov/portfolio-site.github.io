@@ -71,6 +71,7 @@ body {
 }
 
 .page-header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +87,6 @@ body {
           justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-color: #72fa7d;
 }
 
 .page-header__background {
