@@ -16,19 +16,19 @@ navToggle.addEventListener("click", function (evt) {
 
 /* NAV POSITION */
 
-let header = document.querySelector(".page-header");
+// let header = document.querySelector(".page-header");
 
-document.addEventListener("scroll", function() {
-  if (document.documentElement.scrollTop > (header.clientHeight + navBar.clientHeight)) {
-   document.querySelector(".main-nav").classList.add("main-nav--fixed"),
-   document.querySelector(".main-nav").classList.add("main-nav--down");
-  }
+// document.addEventListener("scroll", function() {
+//   if (document.documentElement.scrollTop > (header.clientHeight + navBar.clientHeight)) {
+//    document.querySelector(".main-nav").classList.add("main-nav--fixed"),
+//    document.querySelector(".main-nav").classList.add("main-nav--down");
+//   }
 
-  if (document.documentElement.scrollTop < header.clientHeight) {
-    document.querySelector(".main-nav").classList.remove("main-nav--fixed"),
-    document.querySelector(".main-nav").classList.remove("main-nav--down");
-   }
- });
+//   if (document.documentElement.scrollTop < header.clientHeight) {
+//     document.querySelector(".main-nav").classList.remove("main-nav--fixed"),
+//     document.querySelector(".main-nav").classList.remove("main-nav--down");
+//    }
+//  });
 
 /* ACTIVE PAGE */
 
