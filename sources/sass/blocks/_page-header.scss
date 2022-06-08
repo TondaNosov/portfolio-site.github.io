@@ -1,14 +1,6 @@
 .page-header {
   position: relative;
-
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-
   height: 100vh;
-
-  overflow: hidden;
 }
 
 .page-header__background {
@@ -68,7 +60,6 @@
 
 .page-header__wrapper {
   position: absolute;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -111,7 +102,6 @@
 
   .page-header__welcome {
     margin-bottom: 36px;
-
     font-size: 36px;
     line-height: 42px;
   }
@@ -135,7 +125,6 @@
 
   .page-header__welcome {
     margin-bottom: 42px;
-
     font-size: 42px;
     line-height: 48px;
   }

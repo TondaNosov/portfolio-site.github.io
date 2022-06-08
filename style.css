@@ -73,7 +73,6 @@ body {
 .page-header {
   position: relative;
   height: 100vh;
-  overflow: hidden;
 }
 
 .page-header__background {
