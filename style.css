@@ -67,6 +67,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Raleway, sans-serif;
+  color: #474747;
 }
 
 .page-header {
@@ -461,10 +462,6 @@ body {
               transform: translateY(-100px);
     }
   }
-}
-
-.page-main {
-  color: #474747;
 }
 
 .about {
