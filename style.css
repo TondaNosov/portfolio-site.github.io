@@ -1375,7 +1375,7 @@ body {
 }
 
 .popup__body {
-  padding: 30px 5%;
+  padding: 30px 10px;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
