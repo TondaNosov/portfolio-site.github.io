@@ -1,10 +1,20 @@
-/* SIZE OF VIEWPORT */
+/* COMMIT SIZE OF PAGE-HEADER*/
 
+/*
+* Commit size of page-header for mobile version while viewport is changing (it happens while scrolling in Opera, Edge or Firefox) 
+*/
+
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+const tabletWidth = 768;
+
 const pageHeader = document.querySelector('.page-header');
 const pageHeaderBackground = document.querySelector('.page-header__background');
-pageHeader.style.height = `${vh}px`;
-pageHeaderBackground.style.height = `${vh}px`;
+
+if (vw < tabletWidth) {
+  pageHeader.style.height = `${vh}px`;
+  pageHeaderBackground.style.height = `${vh}px`;
+}
 
 /* OPEN / CLOSE NAV */
 
