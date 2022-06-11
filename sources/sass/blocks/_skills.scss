@@ -16,6 +16,7 @@
   
   text-align: center;
 
+  transform-style: preserve-3d;
 }
 
 .skills__item img {  
@@ -23,14 +24,8 @@
   height: 120px;
   object-fit: contain;
 
-  transform: rotateY(90deg);
+  transform: rotateY(0.25turn);
   opacity: 0;
-  transition: 0.3s ease;
-}
-
-.--animate .skills__item img {
-  transform: rotateY(0deg);
-  opacity: 1;
 }
 
 .--animate .skills__item {
@@ -39,6 +34,8 @@
     &:nth-child(#{$index}) {
       & img {
       transition: 0.3s ease #{$delay + s};
+      transform: rotate(0turn);
+      opacity: 1;    
       }
     }
   }
@@ -52,22 +49,6 @@
   font-weight: 700;
 
   opacity: 0;
-  transition: 0.3s ease;
-}
-
-.skills__item {
-  @for $index from 1 through 9 {
-    $delay: 9 * 0.2 - 0.2 * $index;
-    &:nth-child(#{$index}) {
-      & h3 {
-      transition: 0.8s ease #{$delay + s};
-      }
-    }
-  }
-}
-
-.--animate .skills__item h3 {
-  opacity: 1;
 }
 
 .--animate .skills__item {
@@ -75,11 +56,14 @@
     $delay: $index * 0.2 + 0.1;
     &:nth-child(#{$index}) {
       & h3 {
-      transition: 0.8s ease #{$delay + s};
+      transition: 0.3s ease #{$delay + s};
+      opacity: 1;
       }
     }
   }
 }
+
+/* for desktop */
 
 @media (min-width: $desktop-width) {
   .skills {
