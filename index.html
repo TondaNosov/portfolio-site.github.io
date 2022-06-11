@@ -206,15 +206,19 @@
       <h2 class="section-header section-header--footer --anim-items --anim-no-hide">Contact</h2>
       <div class="section-header__underline section-header__underline--footer --anim-items --anim-no-hide"></div>
 
-      <div class="test">
+      <div>
         <span class="contact__intro --anim-items --anim-no-hide">Do you want to hire me?</span>
       </div>
       
       <!-- FORM -->
-      <form class="contact__form --anim-items --anim-no-hide" id="form" action="https://usebasin.com/f/29887bd162f0" target="_blank" method="POST"
-        autocomplete="on">
+      <form class="contact__form --anim-items --anim-no-hide" 
+            id="form" 
+            action="https://usebasin.com/f/29887bd162f0" 
+            target="_blank" 
+            method="POST"
+            autocomplete="on">
         <input class="contact__input" type="text" id="name" name="name" placeholder="Name" required>
-        <input class="contact__input" type="text" id="company" name="company" placeholder="Company">
+        <input class="contact__input" type="text" id="company" name="company" placeholder="Company" required>
         <input class="contact__input" type="email" id="email" name="email" placeholder="E-mail"
           pattern="[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_.]+" required>
         <textarea class="contact__message" name="message" placeholder="Your message"></textarea>

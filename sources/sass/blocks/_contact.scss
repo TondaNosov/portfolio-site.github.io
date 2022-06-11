@@ -12,13 +12,12 @@
 
   transform: translate(-50vh, 0);
   opacity: 0;
-  transition: 0.8s ease-in-out;
 }
 
 .contact__intro.--animate {
+  transition: 0.8s ease-in-out;
   transform: translate(0, 0);
   opacity: 1;
-  transition: 0.8s ease-in-out;
 }
 
 .contact__form {

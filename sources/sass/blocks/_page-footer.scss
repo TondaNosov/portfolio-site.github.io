@@ -1,21 +1,21 @@
 .page-footer {  
-  background-color: $base-color;
-  color: $white-color;
   padding-top: 40px;
+  color: $white-color;
+  background-color: $base-color;
 }
 
 .page-footer__info {
   padding-top: 20px;
   padding-bottom: 40px;
 
-  background-color: $base-darker-color;
-
   text-align: center;
   color: $white-color;
-}
 
-.page-footer__info span {
-  color: $second-color;
+  background-color: $base-darker-color;
+
+  & span {
+    color: $second-color;
+  }
 }
 
 @media (min-width: $desktop-width) {

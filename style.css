@@ -1100,17 +1100,17 @@ body {
 }
 
 .page-footer {
-  background-color: #2a3247;
-  color: #ffffff;
   padding-top: 40px;
+  color: #ffffff;
+  background-color: #2a3247;
 }
 
 .page-footer__info {
   padding-top: 20px;
   padding-bottom: 40px;
-  background-color: #141d31;
   text-align: center;
   color: #ffffff;
+  background-color: #141d31;
 }
 
 .page-footer__info span {
@@ -1140,16 +1140,14 @@ body {
   -webkit-transform: translate(-50vh, 0);
           transform: translate(-50vh, 0);
   opacity: 0;
-  -webkit-transition: 0.8s ease-in-out;
-  transition: 0.8s ease-in-out;
 }
 
 .contact__intro.--animate {
+  -webkit-transition: 0.8s ease-in-out;
+  transition: 0.8s ease-in-out;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
-  -webkit-transition: 0.8s ease-in-out;
-  transition: 0.8s ease-in-out;
 }
 
 .contact__form {
