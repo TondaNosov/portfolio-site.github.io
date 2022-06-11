@@ -957,7 +957,6 @@ body {
 
 .card {
   position: relative;
-  overflow: hidden;
 }
 
 .card__image {
@@ -1009,6 +1008,7 @@ body {
   opacity: 0;
   -webkit-transition: 0.35s ease-in-out;
   transition: 0.35s ease-in-out;
+  overflow: hidden;
 }
 
 .card__header {

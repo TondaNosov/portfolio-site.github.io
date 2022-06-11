@@ -8,7 +8,6 @@
 
 .card {
   position: relative;
-  overflow: hidden;
 }
 
 .card__image {
@@ -50,6 +49,7 @@
 
   opacity: 0;
   transition: 0.35s ease-in-out;
+  overflow: hidden;
 }
 
 .card__header {
