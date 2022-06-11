@@ -190,7 +190,7 @@ body {
 }
 
 /* For desktops */
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .page-header__background::before {
     -webkit-transform: translate(-50%, -45%);
             transform: translate(-50%, -45%);
@@ -423,7 +423,7 @@ body {
 }
 
 /* For desctops */
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .main-nav {
     position: absolute;
     top: 100vh;
@@ -496,12 +496,13 @@ body {
   transition: 0.8s ease-in-out;
 }
 
-@media (min-width: 1200px) {
+/* For desktops */
+@media (min-width: 1250px) {
   .about {
     padding: 133px 25px 80px 25px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1250px;
   }
   .about__image {
     width: 350px;
@@ -561,7 +562,7 @@ body {
   background: #ffffff;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .section-header__underline {
     margin-bottom: 80px;
   }
@@ -740,7 +741,7 @@ body {
 }
 
 /* for desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .skills {
     padding: 80px 25px;
   }
@@ -773,8 +774,6 @@ body {
   -webkit-transform: translate(-120%, 0);
           transform: translate(-120%, 0);
   opacity: 0;
-  -webkit-transition: 1.5s ease-in;
-  transition: 1.5s ease-in;
 }
 
 .--animate .courses__item:nth-child(1) {
@@ -879,11 +878,11 @@ body {
 }
 
 .--animate .courses__img {
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
-  -webkit-transition: 0.8s ease-out;
-  transition: 0.8s ease-out;
 }
 
 /* For tablets */
@@ -914,24 +913,31 @@ body {
 }
 
 /* For desctops */
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .courses {
     padding: 80px 25px;
   }
   .courses__container {
-    max-width: 1200px;
+    max-width: 1250px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 .projects {
-  background-color: #f5f5f5;
   padding: 40px 5%;
+  background-color: #f5f5f5;
   overflow: hidden;
 }
 
-.projects__list {
+/* For desktops */
+@media (min-width: 1250px) {
+  .projects {
+    padding: 80px 25px;
+  }
+}
+
+.card__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -949,43 +955,35 @@ body {
           justify-content: center;
 }
 
-@media (min-width: 1200px) {
-  .projects {
-    padding: 80px 25px;
-  }
-}
-
 .card {
   position: relative;
   overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   -webkit-transform: translate(0, 120%);
           transform: translate(0, 120%);
   opacity: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
 }
 
-.card.--animate {
+.card__list.--animate .card:nth-child(1) .card__image {
+  -webkit-transition: 0.8s ease-out 0s;
+  transition: 0.8s ease-out 0s;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
 }
 
-.card.--animate:nth-child(1) {
-  -webkit-transition: 0.8s ease-out 0s;
-  transition: 0.8s ease-out 0s;
-}
-
-.card.--animate:nth-child(2) {
-  -webkit-transition: 0.8s ease-out 0.15s;
-  transition: 0.8s ease-out 0.15s;
-}
-
-.card.--animate:nth-child(3) {
+.card__list.--animate .card:nth-child(2) .card__image {
   -webkit-transition: 0.8s ease-out 0.3s;
   transition: 0.8s ease-out 0.3s;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .card__wrap {
@@ -1011,13 +1009,6 @@ body {
   opacity: 0;
   -webkit-transition: 0.35s ease-in-out;
   transition: 0.35s ease-in-out;
-}
-
-.card__image {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 400px;
 }
 
 .card__header {
@@ -1089,10 +1080,6 @@ body {
   color: #ffffff;
 }
 
-.card__button:hover .card {
-  opacity: 1;
-}
-
 .card__wrap.--focused {
   opacity: 1;
 }
@@ -1130,7 +1117,7 @@ body {
   color: #ff445e;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .page-footer {
     padding-top: 80px;
   }

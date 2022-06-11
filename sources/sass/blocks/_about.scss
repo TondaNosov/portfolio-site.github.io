@@ -32,6 +32,8 @@
   transition: 0.8s ease-in-out;
 }
 
+/* For desktops */
+
 @media (min-width: $desktop-width) {
   .about {
     padding: 133px 25px 80px 25px;
@@ -39,7 +41,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    max-width: 1200px;
+    max-width: 1250px;
   }
 
   .about__image {

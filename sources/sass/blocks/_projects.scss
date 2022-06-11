@@ -1,17 +1,10 @@
 .projects {
-  background-color: $background-color;
   padding: 40px 5%;
-
+  background-color: $background-color;
   overflow: hidden;
 }
 
-.projects__list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
+/* For desktops */
 
 @media (min-width: $desktop-width) {
   .projects {
