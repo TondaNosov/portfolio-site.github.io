@@ -498,7 +498,7 @@ body {
 
 @media (min-width: 1200px) {
   .about {
-    padding: 133px 0 80px 0;
+    padding: 133px 25px 80px 25px;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -742,7 +742,7 @@ body {
 /* for desktop */
 @media (min-width: 1200px) {
   .skills {
-    padding: 80px 0;
+    padding: 80px 25px;
   }
   .skills__list {
     max-width: 1200px;
@@ -777,30 +777,36 @@ body {
   transition: 1.5s ease-in;
 }
 
-.--animate .courses__item {
+.--animate .courses__item:nth-child(1) {
+  -webkit-transition: 0.5s ease-in 0s;
+  transition: 0.5s ease-in 0s;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
 }
 
-.--animate .courses__item:nth-child(1) {
-  -webkit-transition: 0.5s ease-in 0s;
-  transition: 0.5s ease-in 0s;
-}
-
 .--animate .courses__item:nth-child(2) {
   -webkit-transition: 0.5s ease-in 0.4s;
   transition: 0.5s ease-in 0.4s;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .--animate .courses__item:nth-child(3) {
   -webkit-transition: 0.5s ease-in 0.8s;
   transition: 0.5s ease-in 0.8s;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .--animate .courses__item:nth-child(4) {
   -webkit-transition: 0.5s ease-in 1.2s;
   transition: 0.5s ease-in 1.2s;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .courses__item::before {
@@ -867,19 +873,17 @@ body {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  -webkit-transform: translate(120%, 120%);
-          transform: translate(120%, 120%);
+  -webkit-transform: translate(0, 120%);
+          transform: translate(0, 120%);
   opacity: 0;
-  -webkit-transition: 0.8s ease-in-out;
-  transition: 0.8s ease-in-out;
 }
 
 .--animate .courses__img {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
-  -webkit-transition: 0.8s ease-in-out;
-  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
 }
 
 /* For tablets */
@@ -912,7 +916,7 @@ body {
 /* For desctops */
 @media (min-width: 1200px) {
   .courses {
-    padding: 80px 0;
+    padding: 80px 25px;
   }
   .courses__container {
     max-width: 1200px;
@@ -947,7 +951,7 @@ body {
 
 @media (min-width: 1200px) {
   .projects {
-    padding: 80px 0;
+    padding: 80px 25px;
   }
 }
 
