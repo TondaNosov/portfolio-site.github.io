@@ -1,3 +1,11 @@
+/* SIZE OF VIEWPORT */
+
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+const pageHeader = document.querySelector('.page-header');
+const pageHeaderBackground = document.querySelector('.page-header__background');
+pageHeader.style.height = `${vh}px`;
+pageHeaderBackground.style.height = `${vh}px`;
+
 /* OPEN / CLOSE NAV */
 
 let navToggle = document.querySelector('.main-nav__toggle');
