@@ -3,9 +3,9 @@
   font-style: normal;
   font-weight: 400;
   src: 
-       url('sources/fonts/raleway-v26-latin-regular.woff2') format('woff2'), 
-       url('sources/fonts/raleway-v26-latin-regular.woff') format('woff'),
-       url('sources/fonts/raleway-v26-latin-regular.ttf') format('truetype');
+       url('sources/fonts/raleway-v27-latin-ext_latin-regular.woff2') format('woff2'), 
+       url('sources/fonts/raleway-v27-latin-ext_latin-regular.woff') format('woff'),
+       url('sources/fonts/raleway-v27-latin-ext_latin-regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -13,9 +13,9 @@
   font-style: normal;
   font-weight: 700;
   src:
-       url('sources/fonts/raleway-v26-latin-700.woff2') format('woff2'),
-       url('sources/fonts/raleway-v26-latin-700.woff') format('woff'),
-       url('sources/fonts/raleway-v26-latin-700.ttf') format('truetype');
+       url('sources/fonts/raleway-v27-latin-ext_latin-700.woff2') format('woff2'),
+       url('sources/fonts/raleway-v27-latin-ext_latin-700.woff') format('woff'),
+       url('sources/fonts/raleway-v27-latin-ext_latin-700.ttf') format('truetype');
 }
 
 html {
@@ -76,4 +76,8 @@ body {
 
   font-family: Raleway, sans-serif;
   color: $text-color;
+}
+
+input, textarea {
+  font-family: Raleway, sans-serif;
 }

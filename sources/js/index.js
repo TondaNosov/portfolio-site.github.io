@@ -166,3 +166,46 @@ document.addEventListener("keydown", function(e) {
     popupClose(popupActive);
   }
 });
+
+/* CHANGE LANGUAGE */
+
+const langToggle = document.querySelector('.main-nav__change-lang');
+const allLang = ["cs", "en"];
+
+langToggle.addEventListener("change", changeURLLanguage);
+
+function changeURLLanguage() {
+  let lang = langToggle.value;
+  location.href = window.location.pathname + "#" + lang;
+  location.reload();
+}
+
+function changeLanguage() {
+  let hash = window.location.hash;
+  hash = hash.substring(1);
+
+  if (!allLang.includes(hash)) {
+    location.href = window.location.pathname + "#cs";
+    location.reload();
+  }
+
+  langToggle.value = hash;
+
+  document.querySelector("title").innerHTML = langArr["title"][hash];
+
+  document.documentElement.setAttribute("lang", hash);
+
+  for (let key in langArr){
+    keyArr = document.querySelectorAll(key);
+    for (let index of keyArr) {
+      if (index.placeholder) {
+        index.placeholder = langArr[key][hash];
+      } else {
+        index.innerHTML = langArr[key][hash];
+      }
+    }
+    
+  }
+}
+
+changeLanguage();

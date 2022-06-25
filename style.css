@@ -2,14 +2,14 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  src: url("sources/fonts/raleway-v26-latin-regular.woff2") format("woff2"), url("sources/fonts/raleway-v26-latin-regular.woff") format("woff"), url("sources/fonts/raleway-v26-latin-regular.ttf") format("truetype");
+  src: url("sources/fonts/raleway-v27-latin-ext_latin-regular.woff2") format("woff2"), url("sources/fonts/raleway-v27-latin-ext_latin-regular.woff") format("woff"), url("sources/fonts/raleway-v27-latin-ext_latin-regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
-  src: url("sources/fonts/raleway-v26-latin-700.woff2") format("woff2"), url("sources/fonts/raleway-v26-latin-700.woff") format("woff"), url("sources/fonts/raleway-v26-latin-700.ttf") format("truetype");
+  src: url("sources/fonts/raleway-v27-latin-ext_latin-700.woff2") format("woff2"), url("sources/fonts/raleway-v27-latin-ext_latin-700.woff") format("woff"), url("sources/fonts/raleway-v27-latin-ext_latin-700.ttf") format("truetype");
 }
 
 html {
@@ -68,6 +68,10 @@ body {
   margin: 0;
   font-family: Raleway, sans-serif;
   color: #474747;
+}
+
+input, textarea {
+  font-family: Raleway, sans-serif;
 }
 
 .page-header {
@@ -156,8 +160,8 @@ body {
 }
 
 .page-header__welcome {
-  margin-bottom: 24px;
-  font-size: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
   line-height: 30px;
   font-weight: 400;
   text-align: center;
@@ -205,7 +209,7 @@ body {
   }
   .page-header__welcome {
     margin-bottom: 42px;
-    font-size: 42px;
+    font-size: 39px;
     line-height: 48px;
   }
 }
@@ -299,6 +303,36 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   overflow: hidden;
+}
+
+.main-nav__change-lang {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  text-align: center;
+  color: #ff445e;
+  background-color: #2a3247;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.main-nav__change-lang:focus {
+  outline: none;
+  background-color: #ff445e;
+  color: #2a3247;
+}
+
+.main-nav__change-lang:active {
+  outline: none;
+}
+
+.main-nav__change-lang::-ms-expand {
+  display: none;
 }
 
 .main-nav__item {
@@ -405,6 +439,22 @@ body {
   .main-nav--close .main-nav__list {
     height: auto;
   }
+  .main-nav__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #141d31;
+  }
   .main-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -416,6 +466,12 @@ body {
     height: auto;
     margin-top: 0px;
     border-top: none;
+  }
+  .main-nav__change-lang {
+    position: static;
+    background-color: #141d31;
+    height: 50px;
+    width: 70px;
   }
   .main-nav__item a {
     padding: 15px 20px;
@@ -441,7 +497,7 @@ body {
     position: fixed;
     top: 0;
   }
-  .main-nav__list {
+  .main-nav__wrapper {
     width: 1200px;
     margin-right: auto;
     margin-left: auto;
@@ -507,6 +563,9 @@ body {
   .about__image {
     width: 350px;
     height: auto;
+  }
+  .about__info {
+    text-align: center;
   }
 }
 
