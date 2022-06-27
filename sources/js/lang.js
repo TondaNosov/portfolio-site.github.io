@@ -5,7 +5,7 @@ const langArr = {
   },
   /* header */
   ".--lang---welcome": {
-    "cs": "Ahoj jsem <span>Anton Nosov</span>.<br> Jsem začínající web developer.",
+    "cs": "Ahoj, jsem <span>Anton Nosov</span>.<br> Jsem začínající web developer.",
     "en": "Hello, I'm <span>Anton Nosov</span>.<br> I'm a junior web developer."
   },
   ".--lang---hire-me": {

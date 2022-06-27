@@ -45,7 +45,8 @@
   100% {transform: scale(100%);}
 }
 
-.contact__form input, textarea {
+.contact__form input, 
+.contact__form textarea {
   display: block;
   min-width: 100%;
   padding: 10px 15px;
@@ -58,6 +59,11 @@
   border: none;
 
   background-color: $base-darker-color;
+}
+
+.contact__form input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px $base-darker-color inset !important;
+  -webkit-text-fill-color: $white-color !important;
 }
 
 .contact__form textarea {

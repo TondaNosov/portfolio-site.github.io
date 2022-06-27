@@ -1273,7 +1273,8 @@ input, textarea {
   }
 }
 
-.contact__form input, textarea {
+.contact__form input,
+.contact__form textarea {
   display: block;
   min-width: 100%;
   padding: 10px 15px;
@@ -1283,6 +1284,12 @@ input, textarea {
   color: #ffffff;
   border: none;
   background-color: #141d31;
+}
+
+.contact__form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #141d31 inset !important;
+          box-shadow: 0 0 0 1000px #141d31 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .contact__form textarea {
